@@ -1,4 +1,99 @@
  /* It came from google fonts import */
  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); 
 
- 
+ * base styles */
+ * {
+  margin: 0;
+  font-family : "Quicksand";
+  color: #333;
+  background-Color: black;
+ }
+
+ .navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: auto;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+ }
+
+ .navbar h1 {
+  color: #fadd04;
+ }
+
+ .navbar a {
+  margin-left: 16px;
+  margin-right: 20px;
+  text-decoration: none;
+  padding: 6px;
+ }
+
+ .navbar a:hover {
+  color: #fadd04;
+ }
+
+ .content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+ }
+
+ .footer {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: auto;
+  margin: 0 auto;
+  border-top: 1px solid #f2f2f2;
+ }
+
+ .footer h6 {
+  color: black;
+ }
+
+ .social-medias-icons {
+  margin-top: 25px;
+  padding-left:0;
+  margin-bottom: 0;
+  list-style: none;
+ }
+
+ .social-medias-icons li {
+  display: inline-block;
+  margin-bottom:8px;
+ }
+
+.social-medias-icons a {
+  background-color:  #eceeef;
+  color: #23272b;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8ps;
+  border-radius: 100px;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.social-medias-icons a:active,
+.social-medias-icons a:focus,
+.social-medias-icons a:hover {
+  color: yellow;
+  background-color: #262930;
+}
+
+.social-medias-icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px;
+}
+
+
+
+
