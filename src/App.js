@@ -1,21 +1,20 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
-function App() {
-  const obj = {name:"Adriana"};
 
-  const hello = ()=>{
-    return <h2>hello</h2>
-  }
+//This code is used to be a starting point for buildin a React application. 
+//Other components and fuctionality can be added to this base component to create complex applications.
 
-  const array = ['Pizza', 'Tacos', 'Salad']
-  return (
+function App() { 
+  const title = 'Welcome to my portfolio!';
+
+   return (
     <div className="App">
-      <Header myName={obj} hello={hello} array={array} />
+      <Navbar />
+      <div className="content"></div>
+        <Home />
     </div>
   );
 }
 
 export default App;
-.
