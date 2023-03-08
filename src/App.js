@@ -1,7 +1,5 @@
-import './App.css'
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 //This code is used to be a starting point for buildin a React application. 
@@ -10,11 +8,15 @@ import Footer from "./components/Footer";
 function App() { 
   return (
     <div className="App">
+      
       <Navbar />
-      <h1>Welcome to my portfolio!</h1>
+      <h1>
+        <marquee className="marquee" direction="right">
+        Welcome to my Portifolio!
+        </marquee>
+      </h1>
       <div className="content"></div>
         <Home />
-        <Header />
         <Footer />      
     </div>
   );
