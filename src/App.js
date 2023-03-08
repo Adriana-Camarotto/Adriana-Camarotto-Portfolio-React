@@ -10,11 +10,6 @@ function App() {
     <div className="App">
       
       <Navbar />
-      <h1>
-        <marquee className="marquee" direction="right">
-        Welcome to my Portifolio!
-        </marquee>
-      </h1>
       <div className="content"></div>
         <Home />
         <Footer />      
