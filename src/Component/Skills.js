@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Container from "react-bootstrap/Container";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, ffaCss3Alt, faBootstrap, faGit, faGithub, faReact, faNode, faNpm, faCss3Alt} from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faCss3Alt, faBootstrap, faGit, faGithub, faReact, faNode, faNpm, faCss3Alt} from '@fortawesome/free-brands-svg-icons';
 
 
 export default function Skills () {
@@ -17,7 +17,7 @@ export default function Skills () {
         </div>
       </div>  
 
-
+      
       <div className="row" style={{ marginLeft: '10px'}}>
       <Card  className='skills-card p-1 m-5' style={{ width: '150px', margin: '5px'}}>
           <FontAwesomeIcon icon={faHtml5} size="4x" style={{ marginTop: '20px' }} />
