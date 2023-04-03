@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Container from "react-bootstrap/Container";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3Alt, faBootstrap, faGit, faGithub, faReact, faNode, faNpm, faCss3Alt} from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faCss3Alt, faBootstrap, faGit, faGithub, faReact, faNode, faNpm} from '@fortawesome/free-brands-svg-icons';
 
 
 export default function Skills () {
