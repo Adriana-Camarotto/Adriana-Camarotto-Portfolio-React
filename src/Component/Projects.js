@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Container from "react-bootstrap/Container";
-import Brigadeiro from '../Assets/preview(Brigadeiro).png';
-import Tea from '../Assets/Preview -tearecipe.png';
+import Brigadeiro from '../Assets/brigadeiropage.png';
+import Tea from '../Assets/tearecipe.png';
 import NWL from '../Assets/preview NWL.png';
 import Horiseon from '../Assets/Horiseon.png';
 import WeekendFuntimes from '../Assets/WeekendFuntimes.png';
