@@ -157,6 +157,36 @@
   margin-top: 30px;
 }
 
+/* Skills  */
+
+.Skills  {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+ .Skills  .card {
+  margin:10px auto;
+  background-image: linear-gradient(0deg, #240320,  #250650, rgb(8, 0, 9));
+  align-items: center;
+  align-content: center;
+  margin-bottom: 45px;
+  width: 200px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.517);
+  transition: transform .3s; /* recebe duas propriedades transform e tempo .3s*/
+}
+.Skills .card:hover {
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.524);
+  transform: scale(1.02)
+}
+
+.skills .btn {
+  background-color:  rgb(38, 2, 64);
+  box-shadow: 10px 10px 10px black;
+}
+.otherskill h2, p {
+  color:rgb(74, 6, 98);
+}
+
   /* Project  */
   .projects {
     margin-top: 40px;
@@ -182,8 +212,9 @@
   .projects .btn {
     background-color:  rgb(38, 2, 64);
     box-shadow: 10px 10px 10px black;
+    margin-right: 10px;
   }
- 
+
   .projects img {
     margin: 20px;
     margin-bottom: 0;
@@ -195,7 +226,10 @@
     font-size: 25px;
   
   }
-  
+.projects .cardText {
+    color: whitesmoke;
+  }
+
 .jumbotron {
   background-color: rgb(41, 2, 77);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.517);
@@ -205,26 +239,54 @@
 
 /*Contact me */
 .contactMe{
-  margin-top: 60px;
+  height: 800px;
+  margin-top: 50px;
+  
 }
 
 .contactMe .Col-C1 {
   margin-left: 200px;
+  margin-top: 50px;
+  font-size: 20px;
+  align-content: center;
+ 
+ 
 }
 
-.contactMe .Col-C1 {
-  margin-left: 150px;
+.R2 {
+  background-color: rgba(158, 9, 158, 0.137);
+  box-shadow: 50px 10px 10px rgba(0, 0, 0, 0.517);
+  -webkit-box-shadow: 1px 3px 1px #9E9E9E;
+  -moz-box-shadow: 1px 3px 1px #9E9E9E;
+  box-shadow: 1px 3px 1px #9E9E9E;
 }
-
-.form  {
-  width: 600px;
-  margin-top: 10px;
+.R2 p {
+  font-size: 20px;
+  margin-top: 25px;
+  color: rgb(158, 9, 158);
+  line-height: 1.5px;
+  margin-left: 300px;
+ 
   
-  }
+}
+.form  {
+  width: 100px;
+}
+
+  .form-row {
+    background-color: rgb(158, 9, 158);
+    margin-right: 300px;
+    width: 600px;
+    box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.825);
+    padding: 30px;
+    border-radius: 10px;
+  
+  } 
+
 
 .form-control {
   box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.478);
- }
+}
 
 .form-label {
   text-shadow: 10px 10px 10px rgb(5, 5, 5);
@@ -251,16 +313,7 @@
   
 }
 
-.form-row {
-  background-color: rgb(158, 9, 158);
-  margin-right: 250px;
-  width: 600px;
-  box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.825);
-  padding: 30px;
-  border-radius: 10px;
 
- 
-}
 
 .alert { 
   background-color:  #fadd04 !important;
@@ -281,6 +334,9 @@
        }
     }
     
+.R2 .Col-12 {
+margin-left: 1250px;
+}    
 /* Footer  */
 
 .footer {
@@ -372,27 +428,42 @@
 .navbar {
   width: 100%;
 }
-
-.home .Col-h1 {
-  width: 100%;
+.home {
+  display: flex;
 }
-  .home .myPhoto {
-      width: 100%;         
+.home .Col-h1 {
+  width: 40%;
+}
+
+.home h1 {
+  margin-top: 60px;
+}
+    .home h1, 
+    .home h2, 
+    .home p {
+      font-size: 150%;
     }
-  
-    .footer {
+ .home .myPhoto {
+ 
+  align-items: center;
+ }
+ 
+  .footer {
         width: 100%;
     }
   
-    .footer .copyright-text,
-    .footer .social_media-icons {
+    .footer .copyright-text
+     {
         text-align: left;
         font-size: 50%;
-        line-height: 1.2;
-  
+        line-height: 1.2;  
             
     }
     
+    .footer .social_media-icons {
+      font-size: 50%;
+      text-align: center;
+    }
     .footer .copyright-text{
       margin-left: 2px;
     }

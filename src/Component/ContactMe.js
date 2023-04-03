@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
-import myPhoto2 from "../Assets/myPhoto3.png";
+import myPhoto3 from "../Assets/myPhoto3.png";
 
 function ContactUs() {
     const [name,setName] = useState('');
@@ -40,19 +40,19 @@ function ContactUs() {
           
   
         return ( 
-            <section className='contactMe' style={{height:830}} >
+            <section className='contactMe' style={{height:"50"}} >
                 <Row>
                     <Col className="Col-C1">
                         <img 
                             className="myPhoto3" 
-                            src={myPhoto2} 
+                            src={myPhoto3} 
                             alt="Adriana Camarotto" />
                     </Col>
                     
                 <Container  className="form  col-sm-12 col-md-6 col-lg-6">
                 <Row className='form-row'>                
                     <Col className="Col-C2">
-                        <h3 className="text-form text-center mb-4"><strong>Get in Touch</strong></h3> 
+                        <h3 className="text-form text-center mb-1"><strong>Get in Touch</strong></h3> 
                         {success && (
                             <Alert variant="success" className='alert text-center'>
                                 Thank you for your message!
@@ -99,14 +99,16 @@ function ContactUs() {
 
                             <Form.Group controlId="message">
                             <Form.Label>Message</Form.Label>
-                            <Form.Control
+                            <textarea
                                 type="textarea"
-                                rows={20}
+                                rows="5"
+                                cols="55"
                                 placeholder="Enter message"
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
                                 required                             
                             />
+                            
                             </Form.Group>
                             <Button className="Sbtn" variant="dark" type="submit" disabled={loading}>
                                 {loading ? 'Submiting...' : 'Send message'}
@@ -116,8 +118,15 @@ function ContactUs() {
                 </Row>
             </Container>    
             </Row>
+            <Row className='R2'>
+                    <Col>
+                        <p>adriana.camarotto@gmail.com  |  +44 07738771515 </p>
+                         
+                    </Col>
+
+                </Row>
             </section>          
-            
+      
     )
 }
 export default ContactUs;
