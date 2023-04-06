@@ -21,11 +21,11 @@
  .navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 20px;
   font-size: 20px; 
-  height: 60px;
   background-color:  rgb(15, 1, 17) !important;
-  height: 60px; 
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.621);  
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.621);
   }
 
 
@@ -54,10 +54,9 @@
     transition: color 0.3s linear;
   }
 
-  
-/* make toggle button white */
-.navbar .navbar-toggler .navbar-toggler-icon {
-    background-color: #fadd04;
+.navbar-toggler .navbar-toggler-icon {
+    background-color:#fadd04
+    ;
     border-radius: 15%;
   }
   
