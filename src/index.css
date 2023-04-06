@@ -179,10 +179,6 @@
   transform: scale(1.02)
 }
 
-/* .skills .btn {
-  background-color:  rgb(38, 2, 64);
-  box-shadow: 10px 10px 10px black;
-} */
 .otherskill h2, p {
   color:rgb(74, 6, 98);
 }
@@ -244,20 +240,19 @@
 }
 
 .R2 {
+  display: flex;
+  text-align: center;
+  align-content: center;
   background-color: rgba(158, 9, 158, 0.137);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.517);
-  margin-bottom: 20px;
- }
+}
 
 .R2 p {
   font-size: 20px;
   padding: 10px;
   margin-top: 25px;
   color: rgb(158, 9, 158);
-  line-height: 1.5px;
-
- 
-  
+  line-height: 1.5px;  
 }
 
   .form-row {
@@ -265,7 +260,6 @@
     box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.849);
     border-radius: 10px;  
     margin-bottom: 50px;
-
   } 
 
 
