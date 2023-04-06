@@ -6,13 +6,14 @@ import { faFacebook, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg
 
 function Footer () {
     return (
+      <Container>
       <footer className="footer"> 
-        <Container>
+      
             <Row>
-              <Col className='C-1 col-sm-12 col-md-6 col-lg-6'>
+              <Col className='C-1 col-sm-12 col-md-6'>
                 <p className='copyright-text'>&copy; Copyright 2023 | All Rights Reserved.</p>          
               </Col>
-                <Col className='C-2 col-sm-12 col-md-6 col-lg-6'>
+                <Col className='C-2 col-sm-12 col-md-6'>
                   <ul className='social-medias-icons btn-outline-warning'>
                     <li>
                       <a  href="https://github.com/Adriana-Camarotto"
@@ -39,9 +40,13 @@ function Footer () {
                   </ul>                    
               </Col>
             </Row>
-          </Container>
+         
   
       </footer>
+      </Container>
+
+      
+
     );
 }
 

@@ -161,6 +161,7 @@
 .Skills  {
   margin-top: 40px;
   margin-bottom: 60px;
+  height: 800px;
 }
 
  .Skills  .card {
@@ -178,10 +179,10 @@
   transform: scale(1.02)
 }
 
-.skills .btn {
+/* .skills .btn {
   background-color:  rgb(38, 2, 64);
   box-shadow: 10px 10px 10px black;
-}
+} */
 .otherskill h2, p {
   color:rgb(74, 6, 98);
 }
@@ -239,57 +240,43 @@
 /*Contact me */
 .contactMe{
   height: 800px;
-  margin-top: 50px;
-  
-}
-
-.contactMe .Col-C1 {
-  margin-left: 200px;
-  margin-top: 50px;
-  font-size: 20px;
-  align-content: center;
- 
- 
+  margin-top: 50px;  
 }
 
 .R2 {
   background-color: rgba(158, 9, 158, 0.137);
-  box-shadow: 50px 10px 10px rgba(0, 0, 0, 0.517);
-  -webkit-box-shadow: 1px 3px 1px #9E9E9E;
-  -moz-box-shadow: 1px 3px 1px #9E9E9E;
-  box-shadow: 1px 3px 1px #9E9E9E;
-}
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.517);
+  margin-bottom: 20px;
+ }
+
 .R2 p {
   font-size: 20px;
+  padding: 10px;
   margin-top: 25px;
   color: rgb(158, 9, 158);
   line-height: 1.5px;
-  margin-left: 300px;
+
  
   
-}
-.form  {
-  width: 100px;
 }
 
   .form-row {
     background-color: rgb(158, 9, 158);
-    margin-right: 300px;
-    width: 600px;
-    box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.825);
-    padding: 30px;
-    border-radius: 10px;
-  
+    box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.849);
+    border-radius: 10px;  
+    margin-bottom: 50px;
+
   } 
 
 
 .form-control {
   box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.478);
-}
+ }
 
 .form-label {
   text-shadow: 10px 10px 10px rgb(5, 5, 5);
-  margin-top: 10px;
+  margin-top: 20px;
+
     
  }
 
@@ -298,7 +285,7 @@
 }
 
 .Sbtn {
-  margin-top: 30px;
+  margin-top: 50px;
   align-content: center;
   text-decoration: none;
   text-size-adjust: auto;
@@ -309,6 +296,7 @@
   align-content: center;
   align-items: center;
   cursor: pointer;
+  margin: 20px;
   
 }
 
@@ -318,41 +306,29 @@
   background-color:  #fadd04 !important;
 }
 
-  @media (min-width: 992px) and (max-width: 2000px) {
-      .form {
-        min-height: 640px;  
-        max-width: 1600px;
-        margin: 80px auto;
-        padding: 50px;
-        margin-right: 250px;
-      }
-
-      .home .row-h {
-        padding-top: 168px;
-        padding-bottom: 155px;
-       }
-    }
-    
-.R2 .Col-12 {
-margin-left: 1250px;
-}    
+ 
 /* Footer  */
 
 .footer {
-  background-color: rgb(74, 6, 98);
-  padding-top: 15px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  color: white;
+  text-align: center;
+  padding: 15px;
   font-size: 18px;
   line-height: 10px;
-  text-align: center;
-  text-decoration: none;
-  text-size-adjust: auto;
+  background-color: rgb(74, 6, 98);
  }
 
 .footer p {
-  padding: 15px;
+  padding: 5px;
   color: rgb(157, 157, 153);
-  margin-left: 20px;
   text-align: left;
+  margin-left: 120px;
+  margin-bottom: 20px;
  }
 
  /* footer`s icons */
@@ -360,10 +336,8 @@ margin-left: 1250px;
   width: 25px;
   height: 25px;
   border-radius: 100%;
-  padding: 6px;
- 
- 
- }
+  padding: 8px;
+}
 
 .social-medias-icons li {
   display: inline-block;
@@ -390,87 +364,4 @@ margin-left: 1250px;
   background-color:  #fadd04;
   
 }
-
-@media(max-width: 575px) {
-
-.home .myPhoto {
-    width: 100%;         
-  }
-
-  .footer {
-      width: 100%;
-  }
-
-  .footer .copyright-text,
-  .footer .social_media-icons {
-      text-align: left;
-      font-size: 50%;
-      line-height: 1.2;
-
-          
-  }
-  
-  .footer .copyright-text{
-    margin-left: 2px;
-  }
-
-  .icon {
-      width: 20px;
-      height: 20px;
-      
-  }
-
-}
-
-
-@media(max-width: 360px) {
-.navbar {
-  width: 100%;
-}
-.home {
-  display: flex;
-}
-.home .Col-h1 {
-  width: 40%;
-}
-
-.home h1 {
-  margin-top: 60px;
-}
-    .home h1, 
-    .home h2, 
-    .home p {
-      font-size: 150%;
-    }
- .home .myPhoto {
  
-  align-items: center;
- }
- 
-  .footer {
-        width: 100%;
-    }
-  
-    .footer .copyright-text
-     {
-        text-align: left;
-        font-size: 50%;
-        line-height: 1.2;  
-            
-    }
-    
-    .footer .social_media-icons {
-      font-size: 50%;
-      text-align: center;
-    }
-    .footer .copyright-text{
-      margin-left: 2px;
-    }
-  
-    .icon {
-        width: 20px;
-        height: 20px;
-        
-    }
-  
-  }

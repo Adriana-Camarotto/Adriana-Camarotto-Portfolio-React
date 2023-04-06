@@ -40,16 +40,17 @@ function ContactUs() {
           
   
         return ( 
+            <Container>
             <section className='contactMe' style={{height:"50"}} >
-                <Row>
-                    <Col className="Col-C1">
+                <Row className='justify-content-center'>
+                    <Col className="Col-C1 col-sm-12 col-md-6 col-lg-6 mb-3 mb-md-0">
                         <img 
-                            className="myPhoto3" 
+                            className="myPhoto3 img-fluid" 
                             src={myPhoto3} 
                             alt="Adriana Camarotto" />
                     </Col>
                     
-                <Container  className="form  col-sm-12 col-md-6 col-lg-6">
+                <Container  className="form  col-sm-12 col-md-6 mb-3 mb-md-0">
                 <Row className='form-row'>                
                     <Col className="Col-C2">
                         <h3 className="text-form text-center mb-1"><strong>Get in Touch</strong></h3> 
@@ -126,7 +127,7 @@ function ContactUs() {
 
                 </Row>
             </section>          
-      
-    )
+      </Container>          
+    );
 }
 export default ContactUs;
