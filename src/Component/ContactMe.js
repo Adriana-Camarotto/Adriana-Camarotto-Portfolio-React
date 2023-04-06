@@ -20,7 +20,7 @@ function ContactUs() {
             formData.append(`email`, email);
             formData.append(`subject`, subject);
             formData.append(`message`, message);
-            const response = await fetch('https://formsubmit.co/ajax/199c2ccd71ba3c110491bf2cbccdb492', {
+            const response = await fetch('https://formsubmit.co/adriana.camarotto@gmail.com', {
                 method: 'POST',
                 body: formData,    
                 
@@ -101,9 +101,9 @@ function ContactUs() {
                             <Form.Group controlId="message">
                             <Form.Label>Message</Form.Label>
                             <textarea
+                                className='textarea'
                                 type="textarea"
                                 rows="5"
-                                cols="55"
                                 placeholder="Enter message"
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
@@ -119,14 +119,10 @@ function ContactUs() {
                 </Row>
             </Container>    
             </Row>
-            <Row className='R2'>
-                    <Col>
-                        <p>adriana.camarotto@gmail.com  |  +44 07738771515 </p>
-                         
-                    </Col>
-
-                </Row>
-            </section>          
+            <Row className='R2'>                   
+                        <p>adriana.camarotto@gmail.com  |  +44 07738771515 </p>                         
+            </Row>
+        </section>          
       </Container>          
     );
 }

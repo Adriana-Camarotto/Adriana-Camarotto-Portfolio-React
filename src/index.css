@@ -239,8 +239,10 @@
 
 /*Contact me */
 .contactMe{
-  height: 800px;
-  margin-top: 50px;  
+  margin-top: 50px; 
+  resize: vertical;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .R2 {
@@ -249,12 +251,12 @@
   align-content: center;
   background-color: rgba(158, 9, 158, 0.137);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.517);
+
 }
 
 .R2 p {
   font-size: 20px;
   padding: 10px;
-  margin-top: 25px;
   color: rgb(158, 9, 158);
   line-height: 1.5px;  
 }
@@ -264,26 +266,36 @@
     box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.849);
     border-radius: 10px;  
     margin-bottom: 50px;
+    resize: vertical;
   } 
 
 
 .form-control {
   box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.478);
- }
+ 
+}
 
 .form-label {
   text-shadow: 10px 10px 10px rgb(5, 5, 5);
-  margin-top: 20px;
-
-    
+  margin-top: 30px;
+  
  }
 
 .text-form {
   text-shadow: 10px 10px 10px rgba(38, 2, 64, 0.974);
+  margin-top: 20px;
 }
 
+.textarea {
+  color: black;
+  margin-top: 5px;
+  box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.849);
+  border-radius: 10px;  
+  margin-bottom: 10px;
+  width: 100%;
+  resize: vertical;
+}
 .Sbtn {
-  margin-top: 50px;
   align-content: center;
   text-decoration: none;
   text-size-adjust: auto;
@@ -297,8 +309,6 @@
   margin: 20px;
   
 }
-
-
 
 .alert { 
   background-color:  #fadd04 !important;
