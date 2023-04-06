@@ -55,8 +55,7 @@
   }
 
 .navbar-toggler .navbar-toggler-icon {
-    background-color:#fadd04
-    ;
+    background-color:#fadd04;
     border-radius: 15%;
   }
   
@@ -67,14 +66,13 @@
   /* Home  */
  .home {
   background-image: linear-gradient(0deg, #240320,  #250650, rgb(8, 0, 9));
-
+  height: 100%; 
  }
 
  .home .myPhoto{
   border: 0.01px solid rgb(38, 2, 64);
   box-shadow: 10px 10px 10px black;
-  border-radius: 100%;
-  width: 75%;   
+  border-radius: 100%;  
 }
 
 
@@ -85,9 +83,9 @@
 }
 
 .home .row-h {
-  margin-top: -60px;
+  margin-top: 50px;
   align-items: center;
-  height: 850px;
+ 
 }
 
 
@@ -160,17 +158,13 @@
 
 .Skills  {
   margin-top: 40px;
-  margin-bottom: 60px;
-  height: 800px;
-}
+  }
 
  .Skills  .card {
   margin:10px auto;
   background-image: linear-gradient(0deg, #240320,  #250650, rgb(8, 0, 9));
   align-items: center;
   align-content: center;
-  margin-bottom: 45px;
-  width: 200px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.517);
   transition: transform .3s; /* recebe duas propriedades transform e tempo .3s*/
 }
@@ -178,11 +172,21 @@
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.524);
   transform: scale(1.02)
 }
-
-.otherskill h2, p {
+.ortherskill {
+  position: fixed;
+  left: 0;
+  bottom: 90px;
+}
+.otherskill h2 {
   color:rgb(74, 6, 98);
 }
 
+.otherskill p {
+  color:rgb(74, 6, 98);
+  height: 45px;
+  margin-bottom: 100px;
+ 
+}
   /* Project  */
   .projects {
     margin-top: 40px;
@@ -358,4 +362,3 @@
   background-color:  #fadd04;
   
 }
- 
