@@ -1,16 +1,16 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import myPhoto from "../Assets/AdriProfileImg.png";
 
+
 function Home() {
-  return (
-    <section className="home">
-    <Container>
-      <Row className="row-h">
-        <Col className="col-h1">
-          <div>
+  return (    
+    <Container >
+      <section className="home">
+        <div className="container-fluid">
+          <div className="row">
+          <Col className="col-h1">          
             <p>Hi there! I am</p>
             <h1>ADRI CAMAROTTO</h1>
             <h2>Front End Web Developer</h2>
@@ -27,16 +27,16 @@ function Home() {
               rel="noreferrer"
             >
               My Github
-            </a>
-          </div>
+            </a>         
         </Col>
 
         <Col className="col-h2">
           <img className="myPhoto" src={myPhoto} alt="Adriana Camarotto" />
         </Col>
-      </Row>
-    </Container>
-    </section>
+          </div>
+        </div>
+      </section>
+    </Container>    
   );
 }
 

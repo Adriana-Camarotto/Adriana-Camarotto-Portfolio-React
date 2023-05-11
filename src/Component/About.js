@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import myPhoto2 from "../Assets/myPhoto2.png";
-import resume from "../Assets/CV-AdriCamarotto23.pdf"
+import resume from "../Assets/CV-AdriCamarotto0523.pdf"
 
 export default function About() {
     return (
@@ -35,8 +35,7 @@ export default function About() {
           </Col>         
         </Row>  
       </Container>
-    </section>
-      
+    </section>      
     );
   }
 

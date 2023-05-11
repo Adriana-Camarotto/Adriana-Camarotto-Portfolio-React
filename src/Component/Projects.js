@@ -196,7 +196,7 @@ import Myteam from '../Assets/Myteam.jpeg';
               </Card>
 
             <Card className='Card-body' style={{ width: '300px' }}>
-              <Card.Img variant="top" src={Horiseon} style={{ width:'280px', height: '376px' }}/>
+              <Card.Img variant="top" src={NWL} style={{ width:'280px', height: '376px' }}/>
                 <Card.Body>
                   <Card.Title className="cardTitle">NWL - Challenge</Card.Title>
                   <Card.Text className="cardText" >
@@ -216,7 +216,7 @@ import Myteam from '../Assets/Myteam.jpeg';
                     <a className="btn btn-outline-warning" 
                       id="btn"
                       src="WOdyssey"
-                      href="https://github.com/Adriana-Camarotto/Horiseon-Code-Refactor" 
+                      href="https://github.com/Adriana-Camarotto/NLW-sports-explorer"
                       role="button"
                       target="_blank"
                       rel="noreferrer"                        
@@ -225,7 +225,7 @@ import Myteam from '../Assets/Myteam.jpeg';
               </Card>
 
               <Card className='Card-body' style={{ width: '300px' }}>
-              <Card.Img variant="top" src={NWL} style={{ width:'280px', height: '376px' }}/>
+              <Card.Img variant="top" src={Horiseon} style={{ width:'280px', height: '376px' }}/>
                 <Card.Body>
                   <Card.Title className="cardTitle">Horiseon</Card.Title>
                   <Card.Text className="cardText">
@@ -245,7 +245,7 @@ import Myteam from '../Assets/Myteam.jpeg';
                     <a className="btn btn-outline-warning" 
                       id="btn"
                       src="WOdyssey"
-                      href="https://github.com/Adriana-Camarotto/NLW-sports-explorer"
+                     href="https://github.com/Adriana-Camarotto/Horiseon-Code-Refactor" 
                       role="button"
                       target="_blank"
                       rel="noreferrer"                        

@@ -71,7 +71,6 @@ export default function Skills () {
             </Card.Body>
           </Card>
 
-
           <Card  className='skills-card p-1 m-5' style={{ width: '150px', margin: '5px' }}>
           <FontAwesomeIcon icon={faReact} size="4x" style={{ marginTop: '20px' }} />           
             <Card.Body>
@@ -80,11 +79,14 @@ export default function Skills () {
           </Card>
                     
         </div>
-      </section>
-      <section className='otherskill m-4' >
-      <h2 >Others Skills</h2>
+
+        <div>
+        <section className='otherskill m-2' >
+        <h2 >Others Skills</h2>
           <p> JQuery, ES6, VS Code, APIs, DOM manipulation, Netlify, UX, Web-based applications
           Business Model Canvas, Business plan, Strategic planning, Design thinking</p>
+          </section>
+        </div>  
       </section>
     </Container>
   );

@@ -23,7 +23,6 @@ function ContactUs() {
             const response = await fetch('https://formsubmit.co/adriana.camarotto@gmail.com', {
                 method: 'POST',
                 body: formData,    
-                
             });
             const result = await response.json();
             if (result.success) {
@@ -55,9 +54,10 @@ function ContactUs() {
                     <Col className="Col-C2">
                         <h3 className="text-form text-center mb-1"><strong>Get in Touch</strong></h3> 
                         {success && (
-                            <Alert variant="success" className='alert text-center'>
-                                Thank you for your message!
-                            </Alert>
+                            console.log('all ok')
+                            // <Alert variant="success" className='alert text-center'>
+                            //     Thank you for your message!
+                            // </Alert>
                         )} 
                         {error && (
                             <Alert variant="danger" className="text-center">
