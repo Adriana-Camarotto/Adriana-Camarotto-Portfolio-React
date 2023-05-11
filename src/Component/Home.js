@@ -1,13 +1,12 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import myPhoto from "../Assets/AdriProfileImg.png";
 
 
 function Home() {
-  return (    
-    <Container >
-      <section className="home">
+  return (
+    
+    <section className="home">
         <div className="container-fluid">
           <div className="row">
           <Col className="col-h1">          
@@ -36,7 +35,7 @@ function Home() {
           </div>
         </div>
       </section>
-    </Container>    
+     
   );
 }
 
