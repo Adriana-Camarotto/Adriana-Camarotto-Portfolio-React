@@ -63,33 +63,32 @@
   /* Home  */
  .home {
   background: linear-gradient(0deg, #240320,  #250650, rgb(8, 0, 9));
-  height: 100%; 
+  height: 500vh;
  }
 
 .myPhoto{
+  display: flex;
+  margin: auto;
   border: 0.01px solid rgb(38, 2, 64);
   box-shadow: 10px 10px 10px black;
   border-radius: 100%;  
-  margin-left: 150px auto;
-}
-
-
-h1  {
-  font-size: 60px;
-  margin-left: 60px;
-  color: whitesmoke;
 }
 
 .home .row {
-  margin-top: 50px;
+  margin-top: 70px;
   align-items: center;
  
 }
 
+.home h1  {
+  font-size: 60px;
+  margin-left: 180px;
+  color: whitesmoke;
+}
 
-h2 {
+.home h2 {
   font-size: 34px;
-  margin-left: 60px;
+  margin-left: 180px;
   color: rgb(158, 9, 158);
   line-height: 2rem;
 
@@ -98,12 +97,12 @@ h2 {
 .home p {
   font-size: 20px;
   color:  #fadd04;
-  margin-left: 60px;
+  margin-left: 180px;
   
 }
 
 #githuButton {
-  margin-left: 90px;
+  margin-left: 190px;
   box-shadow: 10px 10px 10px black;
 }
 
@@ -355,4 +354,39 @@ h2 {
 .social-medias-icons a:hover {
   background-color:  #fadd04;
   
+}
+@media only screen and (max-width: 600px) {
+
+.home h1, 
+.home h2, 
+.home p {
+  font-size: 100%;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.myPhoto {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 100px;
+  
+}
+#githuButton {
+  width: 200px;
+  height: 40px;
+  margin-left: 60px;
+  margin-bottom: 50px;
+  box-shadow: 10px 10px 10px black;
+}
+ 
+.footer p {
+  font-size: 50%;
+  margin-left: 20px;
+}
+
+.social-medias-icons li {
+  width: 60%;
+  height: 60%;
+  margin-left: 60px;
+}  
 }
