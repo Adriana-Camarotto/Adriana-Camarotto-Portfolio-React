@@ -5,8 +5,7 @@ import myPhoto from "../Assets/AdriProfileImg.png";
 
 function Home() {
   return (
-    
-    <section className="home">
+      <section className="home">
         <div className="container-fluid">
           <div className="row">
           <Col className="col-h1">          

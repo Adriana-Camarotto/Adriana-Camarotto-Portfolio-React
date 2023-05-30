@@ -3,10 +3,10 @@ import { Container, Row, Col } from 'react-bootstrap';
 import myPhoto2 from "../Assets/myPhoto2.png";
 import resume from "../Assets/CV-AdriCamarotto0523.pdf"
 
-export default function About() {
+  function About() {
     return (
-      <section className="about">
       <Container id="about" className="about">
+        <section className="about container-fluid">
         <Row className='about-row'>
           <Col className="C1">
             <img 
@@ -33,9 +33,10 @@ export default function About() {
               rel="noreferrer"
             >Dowload Resume</a>          
           </Col>         
-        </Row>  
-      </Container>
-    </section>      
+        </Row>
+      </section>  
+    </Container>          
     );
   }
 
+export default About;
