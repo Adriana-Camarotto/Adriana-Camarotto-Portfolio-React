@@ -1,12 +1,11 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import myPhoto2 from "../Assets/myPhoto2.png";
 import resume from "../Assets/CV-AdriCamarotto0523.pdf"
 
   function About() {
     return (
-      <Container id="about" className="about">
-        <section className="about container-fluid">
+      <section className="about container-fluid">
         <Row className='about-row'>
           <Col className="C1">
             <img 
@@ -32,8 +31,7 @@ import resume from "../Assets/CV-AdriCamarotto0523.pdf"
             >Dowload Resume</a>          
           </Col>         
         </Row>
-      </section>  
-    </Container>          
+      </section>        
     );
   }
 

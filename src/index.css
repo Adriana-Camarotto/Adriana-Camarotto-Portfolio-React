@@ -63,7 +63,7 @@
   /* Home  */
  .home {
   background: linear-gradient(0deg, #240320,  #250650, rgb(8, 0, 9));
-  height: 500vh;
+  height: 300vh;
  }
 
 .myPhoto{
@@ -71,11 +71,11 @@
   margin: auto;
   border: 0.01px solid rgb(38, 2, 64);
   box-shadow: 10px 10px 10px black;
-  border-radius: 100%;  
+  border-radius: 100%; 
 }
 
 .home .row {
-  margin-top: 70px;
+  margin-top: 50px;
   align-items: center;
  
 }
@@ -110,19 +110,26 @@
 /* About */
 
 .about {
-   height: 1800px;
+   height: 2020px;
+   background-color: #dfded9;
+  
  }
 
 .myPhoto2{
-  border: 0.01px solid  #240320;
-  box-shadow: 20px 20px 20px rgb(6, 6, 6);
-  border-radius: 100%;
-  margin-top: 100px;
-  width: 70%;
+  display: flex;
+  margin: auto;
+  border: 0.01px solid rgb(38, 2, 64);
+  box-shadow: 10px 10px 10px black;
+  border-radius: 100%; 
+  width: 60%;
+  margin-left: 120px;
+  margin-top: 70px;
 }
 
-.about-row .C2, .C1 {
+.about-row .C2, 
+.about-row.C1 {
   margin-top: 50px;
+  margin: 40px;
 }
 
 .about p {
@@ -139,6 +146,7 @@
   box-shadow: 10px 10px 10px black;
   color: #240320;
   margin-top: 30px;
+  margin-bottom: 60px;
 }
 
 /* Skills  */
@@ -306,7 +314,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 70px;
+  height: 55px;
   color: white;
   text-align: center;
   padding: 15px;
@@ -355,16 +363,27 @@
   background-color:  #fadd04;
   
 }
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 800px) {
 
 .home h1, 
 .home h2, 
 .home p {
-  font-size: 100%;
   align-items: center;
   margin-left: 50px;
 }
 
+.home h1 {
+  font-size: 35px;
+}
+
+.home h2 {
+   font-size: 25px;
+}
+
+.home p{
+  font-size: 20px;
+}
 .myPhoto {
   width: 250px;
   height: 250px;
@@ -380,13 +399,47 @@
 }
  
 .footer p {
-  font-size: 50%;
+  font-size: 10%;
   margin-left: 20px;
+
 }
 
 .social-medias-icons li {
-  width: 60%;
-  height: 60%;
-  margin-left: 60px;
+  width: 30%;
+  height: 30%;
+  margin-left: 4px;
+}
+.social-medias-icons a:active,
+.social-medias-icons a:focus,
+.social-medias-icons a:hover {
+  background-color:  #fadd04;
+  
 }  
+
+/* About me */
+.myPhoto2{
+  width: 250px;
+  height: 250px;
+  margin-bottom: 30px;
+  margin-left: 15%;
+
+}
+
+
+}
+
+@media only screen and (max-width: 1280px) {
+  .footer p {
+    font-size: 50%;
+    margin-left: 5px;
+  }
+
+/* About me */
+.myPhoto2{
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+  margin-left: 15%;
+}
+
 }

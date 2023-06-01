@@ -12,7 +12,7 @@ function Home() {
               <h1>ADRI CAMAROTTO</h1>
               <h2>Front End Web Developer</h2>
               
-              <hr className="my-4"></hr>
+              <hr className="my-5"></hr>
               
               <p>Check out my relevants projects</p>
               <a
