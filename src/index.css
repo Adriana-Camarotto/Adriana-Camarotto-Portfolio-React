@@ -56,7 +56,8 @@
 
 .navbar-toggler .navbar-toggler-icon {
    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28250, 210, 0, 0.55%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e");
-}
+   
+  }
 
 /* Home  */
  .home {
@@ -179,12 +180,13 @@
 
 .otherskill h2 {
   color:rgb(74, 6, 98);
+  
 }
 
 .otherskill p {
   color:rgb(74, 6, 98);
   height: 45px;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   
 }
 
@@ -374,30 +376,36 @@
   
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 768px) {
 
 .home h1, 
 .home h2, 
-.home p {
+.home p,
+.home hr {
   align-items: center;
   margin-left: 30px;
+  margin-right: 20px;
 }
 
 .home h1 {
   font-size: 35px;
+  
 }
 
 .home h2 {
    font-size: 25px;
+   
 }
 
 .home p{
   font-size: 20px;
+  margin-top: 80px;
 }
 .myPhoto {
   width: 250px;
   height: 250px;
   margin-bottom: 100px;
+  margin-left: 10%;
   
 }
 #githuButton {
@@ -408,15 +416,11 @@
   box-shadow: 10px 10px 10px black;
 }
 
-.Skills .row {
-  width: auto;
-  margin-left: 4px;
+.Skills .card:hover {
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.524);
+  transform: scale(1.02)
+}
 
-  
-}
-.skllis-card {
-  margin-left: 120px;
-}
 .footer p {
   font-size: 10%;
   margin-left: 20px;
@@ -443,8 +447,6 @@
   margin-left: 15%;
 
 }
-
-
 }
 
 @media only screen and (max-width: 1280px) {

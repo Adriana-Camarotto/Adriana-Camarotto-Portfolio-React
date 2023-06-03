@@ -81,7 +81,7 @@ export default function Skills () {
         </div>
 
         <div>
-        <section className='otherskill m-2' >
+        <section className='otherskill m-2' style={{marginBottom: '120px'}} >
         <h2 >Others Skills</h2>
           <p> JQuery, ES6, VS Code, APIs, DOM manipulation, Netlify, UX, Web-based applications
           Business Model Canvas, Business plan, Strategic planning, Design thinking</p>
