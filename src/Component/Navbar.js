@@ -10,10 +10,9 @@ export default function Header() {
       </Link>
        <button
         className="navbar-toggler"
-        type="button"
-        aria-label="Toggle navigation"
+       type="button"
         onClick={ () => document.querySelector('.navbar-nav').classList.toggle('show')}
-      >Menu
+      >
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse navbar-nav">

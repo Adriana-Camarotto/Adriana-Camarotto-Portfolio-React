@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import myPhoto2 from "../Assets/myPhoto2.png";
-import resume from "../Assets/CV-AdriCamarotto0523.pdf"
+import resume from "../Assets/CV-AdriCamarotto0523.pdf";
 
   function About() {
     return (

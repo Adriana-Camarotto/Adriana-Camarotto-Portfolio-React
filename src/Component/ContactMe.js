@@ -11,31 +11,31 @@ function ContactUs() {
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
 
-    const handleSubmit = async (e) =>{
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
         try {
-            const formData = new FormData();
-            formData.append(`name`, name);
-            formData.append(`email`, email);
-            formData.append(`subject`, subject);
-            formData.append(`message`, message);
-            const response = await fetch('https://formsubmit.co/adriana.camarotto@gmail.com', {
-                method: 'POST',
-                body: formData,    
-            });
-            const result = await response.json();
-            if (result.success) {
-                setSuccess(true);
-            } else {
-                setError(true);
-            }
-        } catch (error) {
+          const formData = new FormData();
+          formData.append(`name`, name);
+          formData.append(`email`, email);
+          formData.append(`subject`, subject);
+          formData.append(`message`, message);
+          const response = await fetch("https://formsubmit.co/ajax/7018ba8bb5fb2e9328b31de4ff696fb6", {
+            method: 'POST',
+            body: formData,
+          });
+          const result = await response.json();
+          if (result.success) {
+            setSuccess(true);
+          } else {
             setError(true);
+          }
+        } catch (error) {
+          setError(true);
         } finally {
-            setLoading(false);
+          setLoading(false);
         }
-    };
+      };
           
   
         return ( 
@@ -53,13 +53,13 @@ function ContactUs() {
                 <Row className='form-row'>                
                     <Col className="Col-C2">
                         <h3 className="text-form text-center mb-1"><strong>Get in Touch</strong></h3> 
-                        {success && (
-                            console.log('all ok')
-                            // <Alert variant="success" className='alert text-center'>
-                            //     Thank you for your message!
-                            // </Alert>
+                        { success && (
+                            console.log('all ok'),
+                            <Alert variant="success" className='alert text-center'>
+                                Thank you for your message!
+                            </Alert>
                         )} 
-                        {error && (
+                        { error && (
                             <Alert variant="danger" className="text-center">
                                 Something went wrong! Please try again later!
                             </Alert>
@@ -111,7 +111,7 @@ function ContactUs() {
                             />
                             
                             </Form.Group>
-                            <Button className="Sbtn" variant="dark" type="submit" disabled={loading}>
+                            <Button className="btn" variant="dark" type="submit" disabled={loading}>
                                 {loading ? 'Submiting...' : 'Send message'}
                             </Button>
                         </Form>                    
