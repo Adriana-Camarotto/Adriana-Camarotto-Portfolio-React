@@ -110,14 +110,13 @@
 }
 
 #githuButton:hover {
-  background-color: #fdda04;
-  color:rgb(38, 2, 64)
+  color: white;
 }
 /*About */
 
 .about {
    height: 2020px;
-   background-color: #dfded9;
+   background-color: #fdfdfd;
   
  }
 
@@ -150,12 +149,14 @@
 
 .about .btn {
   box-shadow: 10px 10px 10px black;
-  color: #240320;
-  background-color: #fdda04;
+  color: #fdda04;
   margin-top: 30px;
   margin-bottom: 60px;
 }
 
+.about .btn:hover {
+  color: white;
+}
 /* Skills  */
 
 .Skills  {

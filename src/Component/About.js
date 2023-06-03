@@ -21,6 +21,7 @@ import resume from "../Assets/CV-AdriCamarotto0523.pdf";
             <p>After exploring different fields , such as, customer service, digital marketing, and mentoring women in business, I realized how much I missed the world of technology. That's why I have embarked on a new adventure to become a front-end developer, and I must say, I absolutely love it!</p>
             <p>In 2023, I successfully completed the Front End Web Development Bootcamp at edX. Throughout the program I was challenged to think creatively and solve real-world problems. This experience has greatly strengthened my skills in HTML, CSS, JavaScript, React, and other relevant technologies.</p>
             <p>I am incredibly eager to pursue a career in the IT field. Applying the knowledge I have gained and continuing to grow as a front-end developer in a professional setting is something I am very interested in. As I am now a freelance and part of a brilliant team of Web Developers I can't wait to see what the next chapter of my career holds as a front-end web developer!</p>
+            <p>Please, feel free to dowload my resume to know more about my work experience.</p>
             <a
               className="btn btn-outline-warning"
               id="Resume"
