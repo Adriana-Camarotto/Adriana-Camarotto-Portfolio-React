@@ -157,6 +157,7 @@
 .about .btn:hover {
   color: white;
 }
+
 /* Skills  */
 
 .Skills  {
@@ -373,7 +374,7 @@
   
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 360px) {
 
 .home h1, 
 .home h2, 
@@ -406,7 +407,16 @@
   margin-bottom: 50px;
   box-shadow: 10px 10px 10px black;
 }
- 
+
+.Skills .row {
+  width: auto;
+  margin-left: 4px;
+
+  
+}
+.skllis-card {
+  margin-left: 120px;
+}
 .footer p {
   font-size: 10%;
   margin-left: 20px;

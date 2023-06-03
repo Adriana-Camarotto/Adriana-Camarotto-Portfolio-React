@@ -11,15 +11,15 @@ export default function Skills () {
       <section className="Skills" style={{height: '600px'}}> 
       <div className="container-fluid">
         <div className="row">
-            <div className="col-12 jumbotron mb-2 Skills-heading">
+            <div className="col-12 jumbotron mb-1 Skills-heading">
                 <h1 className="text-center">My SKILLS</h1>
             </div>
         </div>
       </div>  
 
       
-      <div className="row" style={{ marginLeft: '10px'}}>
-      <Card  className='skills-card p-1 m-5' style={{ width: '150px', margin: '5px'}}>
+      <div className="row" style={{ marginLeft: '80px'}}>
+      <Card  className='skills-card p-2 m-5' style={{ width: '150px', margin: '5px'}}>
           <FontAwesomeIcon icon={faHtml5} size="4x" style={{ marginTop: '20px' }} />
             <Card.Body>
               <Card.Title className="tool-name">HTML 5</Card.Title>
