@@ -39,7 +39,7 @@ export default function Header() {
           </li>
           <li className="nav-item">
             <Link to="/contactMe" className="nav-link">
-              Contacte Me
+              Contact Me
             </Link>
           </li>
         </ul>
