@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import myPhoto2 from "../Assets/myPhoto2.png";
-import resume from "../Assets/CV-AdriCamarotto0523.pdf";
+import resume from "../Assets/Adriana CamarottoCVset23.docx";
 
   function About() {
     return (
@@ -13,7 +13,6 @@ import resume from "../Assets/CV-AdriCamarotto0523.pdf";
                 src={myPhoto2} 
                 alt="Adriana Camarotto" />
           </Col>     
-       
           <Col className="C2">
             <h1>About me</h1>
             <p>Hello there! My name is Adriana Camarotto and I am a big fan of technology. My journey began when I was studying programming logic during my Civil Engineering degree. Although things didn't go as planned, I later on ended up completing a Business degree and had the opportunity to work for a start-up.</p>
@@ -37,3 +36,4 @@ import resume from "../Assets/CV-AdriCamarotto0523.pdf";
   }
 
 export default About;
+

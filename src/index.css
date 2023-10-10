@@ -1,88 +1,90 @@
  /* It came from google fonts import */
- @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
- html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
 #root {
   display: flex;
   flex-direction: column;
- }
- 
+}
+
  /* base styles */
  * {
   margin: 0;
   font-family: "Quicksand";
-  color: #f9f8f8; 
- }
+  color: #f9f8f8;
+}
 
  /* Navbar */
- .navbar {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  font-size: 20px; 
-  background-color:  rgb(74, 6, 98);
+  font-size: 20px;
+  background-color: rgb(74, 6, 98);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.621);
-  }
+}
 
 
- .navbar .navbar-nav {
+.navbar .navbar-nav {
   margin: 0 0 0 auto;
   font-size: 1.4rem;
 }
 
 .navbar .navbar-brand {
   margin-left: 70px;
-  color:#fadd04;
- }
+  color: #fadd04;
+}
 
 .navbar-brand:hover {
-    color: white;
-    transition: color 0.1s linear;
- }
+  color: white;
+  transition: color 0.1s linear;
+}
 
-  .nav-link {
-    color: #fefcfc!important;
-    margin-right: 80px;
-  }
+.nav-link {
+  color: #fefcfc !important;
+  margin-right: 80px;
+}
 
-  .nav-link:hover {
-    color:#fadd04!important;
-    transition: color 0.3s linear;
-  }
+.nav-link:hover {
+  color: #fadd04 !important;
+  transition: color 0.3s linear;
+}
 
 .navbar-toggler .navbar-toggler-icon {
-   background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28250, 210, 0, 0.55%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e");
-   
-  }
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28250, 210, 0, 0.55%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e");
 
-/* Home  */
- .home {
-  background: linear-gradient(0deg, #240320,  #250650, rgb(8, 0, 9));
+}
+
+ /* Home  */
+.home {
+  background: linear-gradient(0deg, #240320, #250650, rgb(8, 0, 9));
   height: 300vh;
- }
+}
 
-.myPhoto{
+.myPhoto {
   display: flex;
   margin: 60px;
-   border: 0.01px solid rgb(38, 2, 64);
+  border: 0.01px solid rgb(38, 2, 64);
   box-shadow: 10px 10px 10px black;
-  border-radius: 100%; 
+  border-radius: 100%;
 }
 
 .home .row {
   margin-top: 10px;
   align-items: center;
- 
 }
 
 .home hr {
   margin-left: 90px;
 }
-.home h1  {
+
+.home h1 {
   font-size: 60px;
   margin-left: 180px;
   color: whitesmoke;
@@ -93,46 +95,43 @@
   margin-left: 180px;
   color: rgb(158, 9, 158);
   line-height: 2rem;
-
 }
 
 .home p {
   font-size: 20px;
-  color:  #fadd04;
+  color: #fadd04;
   margin-left: 180px;
-  
 }
 
 #githuButton {
   margin-left: 190px;
   color: #fdda04;
   box-shadow: 10px 10px 10px rgb(0, 0, 0);
-  
 }
 
 #githuButton:hover {
   color: white;
 }
-/*About */
+
+ /*About */
 
 .about {
-   height: 2020px;
-   background-color: #fdfdfd;
-  
- }
+  height: 2020px;
+  background-color: #fdfdfd;
+}
 
-.myPhoto2{
+.myPhoto2 {
   display: flex;
   margin: auto;
   border: 0.01px solid rgb(38, 2, 64);
   box-shadow: 10px 10px 10px black;
-  border-radius: 100%; 
+  border-radius: 100%;
   width: 50%;
   margin-left: auto;
   margin-top: 70px;
 }
 
-.about-row .C2, 
+.about-row .C2,
 .about-row.C1 {
   margin-top: 50px;
   margin: 40px;
@@ -141,7 +140,7 @@
 .about p {
   color: #240320;
   text-align: justify;
- }
+}
 
 .about h1 {
   color: #240320;
@@ -161,77 +160,78 @@
 
 /* Skills  */
 
-.Skills  {
-   margin-top: 40px;
-  }
+.Skills {
+  margin-top: 40px;
+}
 
- .Skills  .card {
-  margin:10px auto;
-  background-image: linear-gradient(0deg, #240320,  #250650, rgb(8, 0, 9));
+.Skills .card {
+  margin: 10px auto;
+  background-image: linear-gradient(0deg, #240320, #250650, rgb(8, 0, 9));
   align-items: center;
   align-content: center;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.517);
-  transition: transform .3s; /* recebe duas propriedades transform e tempo .3s*/
+  box-shadow: 10px 10px 10px gray;
+  transition: transform .2s;
+/* recebe duas propriedades transform e tempo .3s*/
 }
+
 .Skills .card:hover {
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.524);
   transform: scale(1.02)
 }
 
 .otherskill h2 {
-  color:rgb(74, 6, 98);
-  
+  color: rgb(74, 6, 98);
 }
 
 .otherskill p {
-  color:rgb(74, 6, 98);
+  color: rgb(74, 6, 98);
   height: 45px;
   margin-bottom: 120px;
-  
 }
 
-  /* Project  */
-  .projects {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
+ /* Project  */
+.projects {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
-   .projects .card {
-    margin:10px auto;
-    background-image: linear-gradient(45deg,  #390a79, #740b68);
-    align-items: center;
-    align-content: center;
-    margin-bottom: 45px;
-    width: 200px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.517);
-    transition: transform .3s; /* recebe duas propriedades transform e tempo .3s*/
-  }
+.projects .card {
+  margin: 10px auto;
+  background-image: linear-gradient(45deg, #390a79, #740b68);
+  align-items: center;
+  align-content: center;
+  margin-bottom: 45px;
+  width: 200px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.517);
+  transition: transform .3s;
+  /* recebe duas propriedades transform e tempo .3s*/
+}
 
-  .projects .card:hover {
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.524);
-    transform: scale(1.02)
-  }
-  
-  .projects .btn {
-    background-color:  rgb(38, 2, 64);
-    box-shadow: 10px 10px 10px black;
-    margin-right: 10px;
-  }
+.projects .card:hover {
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.524);
+  transform: scale(1.02)
+}
 
-  .projects img {
-    margin: 20px;
-    margin-bottom: 0;
-    padding: 10px;
-  }
-  
-  .projects .cardTitle {
-    color: #fadd04;
-    font-size: 25px;
-  
-  }
+.projects .btn {
+  background-color: rgb(38, 2, 64);
+  box-shadow: 10px 10px 10px black;
+  margin-right: 10px;
+}
+
+.projects img {
+  margin: 20px;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+.projects .cardTitle {
+  color: #fadd04;
+  font-size: 25px;
+}
+
 .projects .cardText {
-    color: whitesmoke;
-  }
+  color: whitesmoke;
+}
 
 .jumbotron {
   background-color: rgb(41, 2, 77);
@@ -240,9 +240,9 @@
   padding: 15px;
 }
 
-/*Contact me */
-.contactMe{
-  margin-top: 50px; 
+ /*Contact me */
+.contactMe {
+  margin-top: 50px;
   resize: vertical;
   margin-left: 20px;
   margin-right: 20px;
@@ -255,34 +255,32 @@
   align-content: center;
   background-color: rgba(158, 9, 158, 0.137);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.517);
-  padding: 20px; 
+  padding: 20px;
 }
 
 .R2 p {
   font-size: 20px;
   color: rgb(158, 9, 158);
-  line-height: 1.5px; 
+  line-height: 1.5px;
 }
 
-  .form-row {
-    background-color: rgb(158, 9, 158);
-    box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.849);
-    border-radius: 10px;  
-    margin-bottom: 50px;
-    resize: vertical;
-  } 
+.form-row {
+  background-color: rgb(158, 9, 158);
+  box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.849);
+  border-radius: 10px;
+  margin-bottom: 50px;
+  resize: vertical;
+}
 
 
 .form-control {
   box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.478);
- 
 }
 
 .form-label {
   text-shadow: 10px 10px 10px rgb(5, 5, 5);
   margin-top: 30px;
-  
- }
+}
 
 .text-form {
   text-shadow: 10px 10px 10px rgba(38, 2, 64, 0.974);
@@ -293,7 +291,7 @@
   color: black;
   margin-top: 5px;
   box-shadow: 10px 10px 10px rgba(38, 2, 64, 0.849);
-  border-radius: 10px;  
+  border-radius: 10px;
   margin-bottom: 10px;
   width: 100%;
   resize: vertical;
@@ -311,15 +309,13 @@
   align-items: center;
   cursor: pointer;
   margin: 20px;
-  
 }
 
-.alert { 
-  background-color:  #fadd04 !important;
+.alert {
+  background-color: #fadd04 !important;
 }
 
- 
-/* Footer  */
+ /* Footer  */
 
 .footer {
   position: fixed;
@@ -333,7 +329,7 @@
   font-size: 18px;
   line-height: 10px;
   background-color: rgb(74, 6, 98);
- }
+}
 
 .footer p {
   padding: 5px;
@@ -341,11 +337,11 @@
   text-align: left;
   margin-left: 120px;
   margin-bottom: 20px;
-  line-height: 1.5rem; 
- }
+  line-height: 1.5rem;
+}
 
  /* footer`s icons */
- .icon {
+.icon {
   width: 25px;
   height: 25px;
   border-radius: 100%;
@@ -355,98 +351,92 @@
 .social-medias-icons li {
   display: inline-block;
   margin-left: 60px;
-
- }
+}
 
 .social-medias-icons a {
-    display: inline-block;
-    text-align: center;
-    border-radius: 100px;
-    transition: all .2s linear;
-    text-align: center;
-    text-decoration: none;
-    text-size-adjust: auto; 
-    
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  transition: all .2s linear;
+  text-align: center;
+  text-decoration: none;
+  text-size-adjust: auto;
 }
 
 .social-medias-icons a:active,
 .social-medias-icons a:focus,
 .social-medias-icons a:hover {
-  background-color:  #fadd04;
-  
+  background-color: #fadd04;
 }
 
 @media only screen and (max-width: 768px) {
 
-.home h1, 
-.home h2, 
-.home p,
-.home hr {
-  align-items: center;
-  margin-left: 30px;
-  margin-right: 20px;
-}
+  .home h1,
+  .home h2,
+  .home p,
+  .home hr {
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 20px;
+  }
 
-.home h1 {
-  font-size: 35px;
-  
-}
+  .home h1 {
+    font-size: 35px;
+  }
 
-.home h2 {
-   font-size: 25px;
-   
-}
+  .home h2 {
+    font-size: 25px;
+  }
 
-.home p{
-  font-size: 20px;
-  margin-top: 80px;
-}
-.myPhoto {
-  width: 250px;
-  height: 250px;
-  margin-bottom: 100px;
-  margin-left: 10%;
-  
-}
-#githuButton {
-  width: 200px;
-  height: 40px;
-  margin-left: 60px;
-  margin-bottom: 50px;
-  box-shadow: 10px 10px 10px black;
-}
+  .home p {
+    font-size: 20px;
+    margin-top: 80px;
+  }
 
-.Skills .card:hover {
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.524);
-  transform: scale(1.02)
-}
+  .myPhoto {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 100px;
+    margin-left: 10%;
+  }
 
-.footer p {
-  font-size: 10%;
-  margin-left: 20px;
+  #githuButton {
+    width: 200px;
+    height: 40px;
+    margin-left: 60px;
+    margin-bottom: 50px;
+    box-shadow: 10px 10px 10px black;
+  }
 
-}
+  .Skills .card:hover {
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.524);
+    transform: scale(1.02)
+  }
 
-.social-medias-icons li {
-  width: 30%;
-  height: 30%;
-  margin-left: 4px;
-}
-.social-medias-icons a:active,
-.social-medias-icons a:focus,
-.social-medias-icons a:hover {
-  background-color:  #fadd04;
-  
-}  
+  .footer p {
+    font-size: 10%;
+    margin-left: 20px;
+  }
 
-/* About me */
-.myPhoto2{
-  width: 250px;
-  height: 250px;
-  margin-bottom: 30px;
-  margin-left: 15%;
+  .social-medias-icons li {
+    width: 30%;
+    height: 30%;
+    margin-left: 4px;
+  }
 
-}
+  .social-medias-icons a:active,
+  .social-medias-icons a:focus,
+  .social-medias-icons a:hover {
+    background-color: #fadd04;
+  }
+
+   /* About me */
+  .myPhoto2 {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 30px;
+    margin-left: 15%;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -455,12 +445,11 @@
     margin-left: 5px;
   }
 
-/* About me */
-.myPhoto2{
-  width: 150px;
-  height: 150px;
-  margin-bottom: 30px;
-  margin-left: 15%;
-}
-
+   /* About me */
+  .myPhoto2 {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+    margin-left: 15%;
+  }
 }

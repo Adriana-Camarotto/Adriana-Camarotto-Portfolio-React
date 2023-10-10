@@ -15,36 +15,35 @@ function ContactUs() {
         e.preventDefault();
         setLoading(true);
         try {
-          const formData = new FormData();
-          formData.append(`name`, name);
-          formData.append(`email`, email);
-          formData.append(`subject`, subject);
-          formData.append(`message`, message);
-          const response = await fetch("https://formsubmit.co/ajax/7018ba8bb5fb2e9328b31de4ff696fb6", {
+        const formData = new FormData();
+        formData.append(`name`, name);
+        formData.append(`email`, email);
+        formData.append(`subject`, subject);
+        formData.append(`message`, message);
+        const response = await fetch("https://formsubmit.co/ajax/7018ba8bb5fb2e9328b31de4ff696fb6", {
             method: 'POST',
             body: formData,
-          });
-          const result = await response.json();
-          if (result.success) {
+        });
+        const result = await response.json();
+        if (result.success) {
             setSuccess(true);
-          } else {
+        } else {
             setError(true);
-          }
-        } catch (error) {
-          setError(true);
-        } finally {
-          setLoading(false);
         }
-      };
-          
-  
-        return ( 
+        } catch (error) {
+        setError(true);
+        } finally {
+        setLoading(false);
+        }
+    };
+        
+    return ( 
             <Container>
             <section className='contactMe' style={{height:"50"}} >
                 <Row className='justify-content-center'>
-                    <Col className="Col-C1 col-sm-12 col-md-6 col-lg-6 mb-3 mb-md-0">
+                    <Col className="Col-C1 col-sm-12 col-md-6 col-lg-6 mb-3 mb-md-0" >
                         <img 
-                            className="myPhoto3 img-fluid" 
+                            className="myPhoto3 img-fluid"  
                             src={myPhoto3} 
                             alt="Adriana Camarotto" />
                     </Col>
@@ -123,7 +122,7 @@ function ContactUs() {
                         <p>adriana.camarotto@gmail.com  |  +44 07738771515 </p>                         
             </Row>
         </section>          
-      </Container>          
-    );
+    </Container>          
+);
 }
 export default ContactUs;
