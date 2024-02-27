@@ -27,8 +27,7 @@ import Myteam from '../Assets/Myteam.jpeg';
                 <Card.Body>
                   <Card.Title className="cardTitle">Odissey</Card.Title>
                   <Card.Text className="cardText">
-                  Our team of four, including me, finished the Edx Bootcamp project. 
-                  The Odyssey Travel Companion app provides current details on attractions, 
+                  Provides current details on attractions, 
                   events, and more for tourists to make informed choices. Users can access 
                   detailed descriptions and photos via search.
                   </Card.Text>
@@ -57,7 +56,6 @@ import Myteam from '../Assets/Myteam.jpeg';
                 <Card.Body>
                   <Card.Title className="cardTitle">Weekend Funtimes</Card.Title>
                   <Card.Text className="cardText">
-                  A team of four, including me, finished the project during the Edx Bootcamp.
                   The Weekend Funtimes Planner lets event planners choose themes with APIs 
                   to filter movie options and camping locations based on weather forecasts, 
                   perfect for event planning companies.
@@ -144,7 +142,7 @@ import Myteam from '../Assets/Myteam.jpeg';
               <Card.Body>
                 <Card.Title className="cardTitle">Brigadeiro Recipe</Card.Title>
                 <Card.Text className="cardText">
-                My first Front-End Web Developer project is about making the perfect brigadeiro, the famous Brazilian sweet. 
+                Know how to make the perfect brigadeiro, the famous Brazilian sweet. 
                 Learn the recipe step-by-step and create the perfect treat to you and your loved ones.
                 </Card.Text>
                    <a className="btn btn-outline-warning" 
@@ -172,8 +170,7 @@ import Myteam from '../Assets/Myteam.jpeg';
                   <Card.Title className="cardTitle">Tea Recipe</Card.Title>
                   <Card.Text className="cardText">
                   Learn how to make a perfect tea whit my project done in "The 5 Day Coding Challenge" Event 
-                  were held by Code Institute. This was my third front end project. 
-                  I have learned the basics of HTML, CSS, and JavaScript. 
+                  were held by Code Institute. 
                   </Card.Text>
                     <a className="btn btn-outline-warning" 
                       id="btnbrigadeiro"

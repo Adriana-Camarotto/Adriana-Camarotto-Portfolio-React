@@ -11,7 +11,7 @@ function Footer () {
       
             <Row>
               <Col className='C-1 col-sm-12 col-md-6'>
-                <p className='copyright-text'>&copy; Copyright 2023 | All Rights Reserved.</p>          
+                <p className='copyright-text'>&copy; Copyright 2024 | All Rights Reserved.</p>          
               </Col>
                 <Col className='C-2 col-sm-12 col-md-6'>
                   <ul className='social-medias-icons btn-outline-warning'>

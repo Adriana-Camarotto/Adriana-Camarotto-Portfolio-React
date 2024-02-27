@@ -1,17 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
- 
-  return (    
+  return (
     <nav className="navbar navbar-expand-lg">
       <Link to="/" className="navbar-brand">
-        My Portfolio  
+        My Portfolio
       </Link>
-       <button
+      <button
         className="navbar-toggler"
-       type="button"
-        onClick={ () => document.querySelector('.navbar-nav').classList.toggle('show')}
+        type="button"
+        onClick={() =>
+          document.querySelector(".navbar-nav").classList.toggle("show")
+        }
       >
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -35,7 +36,7 @@ export default function Header() {
           <li className="nav-item">
             <Link to="/projects" className="nav-link">
               Projects
-            </Link> 
+            </Link>
           </li>
           <li className="nav-item">
             <Link to="/contactMe" className="nav-link">
@@ -45,6 +46,5 @@ export default function Header() {
         </ul>
       </div>
     </nav>
-  
-   );
+  );
 }

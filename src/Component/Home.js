@@ -6,7 +6,7 @@ import myPhoto from "../Assets/AdriProfileImg.png";
 function Home() {
   return (
         <section className="home container-fluid">
-          <Row className="row">
+          <Row className="row ">
             <Col className="col-h1">          
               <p>Hi there! I am</p>
               <h1>ADRI CAMAROTTO</h1>
@@ -27,7 +27,7 @@ function Home() {
               </a>         
             </Col>
 
-            <Col className="col-h2">
+            <Col className="col-h2 ">
               <img className="myPhoto" src={myPhoto} alt="Adriana Camarotto" />
             </Col>
           </Row>        
