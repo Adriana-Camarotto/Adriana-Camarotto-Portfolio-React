@@ -99,8 +99,8 @@ function App() {
 
       {/* Right sidebar - Email */}
       <div className="side-email">
-        <a href="mailto:adriana.camarotto@outlook.com">
-          adriana.camarotto@outlook.com
+        <a href="mailto:adriana.camarotto@gmail.com">
+          adriana.camarotto@gmail.com
         </a>
       </div>
 

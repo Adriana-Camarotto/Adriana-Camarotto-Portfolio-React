@@ -90,16 +90,40 @@ img {
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
+}
+
+.logo-tag {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  transition: var(--transition);
+}
+
+.logo-sep {
+  color: var(--text-secondary);
+  font-weight: 300;
+  font-size: 1rem;
+  opacity: 0.4;
 }
 
 .logo-name {
   color: var(--text-primary);
   font-family: var(--font-sans);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: color 0.25s ease;
 }
 
-.navbar-logo:hover {
+.navbar-logo:hover .logo-tag {
+  color: var(--white);
+  text-shadow: 0 0 12px rgba(100, 255, 218, 0.5);
+}
+
+.navbar-logo:hover .logo-name {
   color: var(--accent);
 }
 
@@ -282,6 +306,8 @@ img {
   align-items: center;
   justify-content: center;
   padding: 0 80px;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -418,6 +444,7 @@ img {
   width: 100%;
   height: auto;
   z-index: 1;
+  cursor: pointer;
   mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
@@ -446,6 +473,7 @@ img {
   justify-content: center;
   font-size: 1.4rem;
   color: var(--text-secondary);
+  cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   z-index: 2;
   animation: float 3s ease-in-out infinite;
@@ -680,6 +708,20 @@ img {
 .about-name-wrapper {
   text-align: center;
   margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.about-ac-tag {
+  font-family: var(--font-mono);
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+  display: block;
+  margin-bottom: 6px;
 }
 
 .about-name {
@@ -698,10 +740,21 @@ img {
   -webkit-text-fill-color: transparent;
   transition: background-position 0.4s ease;
   cursor: default;
+  line-height: 1.1;
 }
 
 .about-name:hover {
   background-position: 0 0;
+}
+
+.about-name-role {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  display: block;
+  margin-top: 8px;
+  opacity: 0.7;
 }
 
 .about-wlb {
@@ -793,6 +846,8 @@ img {
 /* ── Experience ── */
 .experience-section {
   background-color: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
 }
 
 .experience-content {
@@ -886,6 +941,42 @@ img {
 /* ── Skills ── */
 .skills-section {
   background-color: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-matrix-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.12;
+}
+
+.skills-matrix-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-primary) 0%,
+    transparent 15%,
+    transparent 85%,
+    var(--bg-primary) 100%
+  );
+  pointer-events: none;
+}
+
+.skills-section .section-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.skills-section .section-deco {
+  position: relative;
+  z-index: 2;
 }
 
 .section-description {
@@ -945,6 +1036,8 @@ img {
 /* ── Projects ── */
 .projects-section {
   background-color: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
 }
 
 .featured-projects {
@@ -997,7 +1090,12 @@ img {
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
-  transition: var(--transition);
+  filter: grayscale(90%);
+  transition:
+    filter 0.4s ease,
+    transform 0.4s ease;
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 
 .project-overlay {
@@ -1012,6 +1110,7 @@ img {
 }
 
 .project-image-wrap:hover img {
+  filter: grayscale(0%);
   transform: scale(1.03);
 }
 
@@ -1185,11 +1284,39 @@ img {
 .contact-section {
   background-color: var(--bg-primary);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-bg-decoration {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 60px;
+  z-index: 0;
+}
+
+.contact-deco-tag {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--accent);
+  opacity: 0.08;
+  display: block;
+  text-align: left;
+}
+
+.contact-deco-close {
+  text-align: right;
 }
 
 .contact-inner {
-  max-width: 600px;
-  padding: 100px 24px 150px;
+  max-width: 620px;
+  padding: 110px 24px 160px;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-overline {
@@ -1208,23 +1335,61 @@ img {
 
 .contact-description {
   font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 40px;
+  line-height: 1.8;
+  margin-bottom: 44px;
+  color: var(--text-secondary);
 }
 
 .contact-btn {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--accent);
   border: 1px solid var(--accent);
-  padding: 16px 32px;
+  padding: 16px 40px;
   border-radius: 4px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   transition: var(--transition);
+  letter-spacing: 0.05em;
+}
+
+.contact-btn-icon {
+  font-size: 1.1rem;
 }
 
 .contact-btn:hover {
   background-color: var(--accent-tint);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(100, 255, 218, 0.1);
+}
+
+.contact-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.contact-social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.contact-social-link:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.contact-social-divider {
+  color: var(--bg-tertiary);
+  font-size: 1.2rem;
 }
 
 /* ── Footer ── */
@@ -1354,6 +1519,31 @@ img {
 
 .scroll-top-btn:hover {
   background: rgba(100, 255, 218, 0.85);
+}
+
+/* ── Generic Section Deco Tags ── */
+.section-deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 60px;
+  z-index: 2;
+}
+
+.section-deco-tag {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--accent);
+  opacity: 0.08;
+  display: block;
+  text-align: left;
+}
+
+.section-deco-close {
+  text-align: right;
 }
 
 /* ── Scroll Reveal ── */

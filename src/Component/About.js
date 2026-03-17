@@ -31,6 +31,12 @@ function About() {
         <img src={myPhoto2} alt="" aria-hidden="true" />
       </div>
       <div className="about-bg-overlay"></div>
+      <div className="section-deco">
+        <span className="section-deco-tag">&lt;about&gt;</span>
+        <span className="section-deco-tag section-deco-close">
+          &lt;/about&gt;
+        </span>
+      </div>
       <div className="section-inner">
         <h2 className="numbered-heading">
           <span className="heading-num">&lt;/&gt;</span> About Me
@@ -84,6 +90,9 @@ function About() {
 
           <div className="about-name-wrapper">
             <span className="about-name">Adri Camarotto</span>
+            <span className="about-name-role">
+              // Frontend Developer &amp; coffee lover
+            </span>
           </div>
 
           <div className="about-wlb">

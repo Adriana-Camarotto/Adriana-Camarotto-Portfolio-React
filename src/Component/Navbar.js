@@ -45,7 +45,9 @@ export default function Header() {
         className="navbar-logo"
         onClick={() => setMenuOpen(false)}
       >
-        &lt;AC/&gt; <span className="logo-name">Adri Camarotto</span>
+        <span className="logo-tag">&lt;AC/&gt;</span>
+        <span className="logo-sep">|</span>
+        <span className="logo-name">Adri Camarotto</span>
       </a>
       <button
         className={`hamburger-btn ${menuOpen ? "open" : ""}`}

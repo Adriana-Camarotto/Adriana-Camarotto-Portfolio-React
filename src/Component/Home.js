@@ -8,7 +8,7 @@ import {
   faNodeJs,
 } from "@fortawesome/free-brands-svg-icons";
 import myPhoto from "../Assets/AdriProfileImg.png";
-import resume from "../Assets/CV0224.pdf";
+import resume from "../Assets/adriana_camarotto_cv_mar_2026.docx";
 
 function Home() {
   const fullText = "Frontend Developer";
@@ -27,6 +27,12 @@ function Home() {
 
   return (
     <section id="home" className="hero">
+      <div className="section-deco">
+        <span className="section-deco-tag">&lt;home&gt;</span>
+        <span className="section-deco-tag section-deco-close">
+          &lt;/home&gt;
+        </span>
+      </div>
       <div className="hero-content">
         <div className="hero-text fade-in">
           <div className="code-decorations">
@@ -65,24 +71,48 @@ function Home() {
         <div className="hero-image fade-in">
           <div className="hero-photo-area">
             <div className="hero-circle-bg"></div>
-            <div className="hero-photo-wrapper">
+            <a
+              href="#about"
+              className="hero-photo-wrapper"
+              aria-label="Go to About section"
+            >
               <img src={myPhoto} alt="Adriana Camarotto" />
-            </div>
-            <div className="floating-icon floating-icon-1">
+            </a>
+            <a
+              href="#skills"
+              className="floating-icon floating-icon-1"
+              aria-label="Go to Skills section"
+            >
               <FontAwesomeIcon icon={faReact} />
-            </div>
-            <div className="floating-icon floating-icon-2">
+            </a>
+            <a
+              href="#skills"
+              className="floating-icon floating-icon-2"
+              aria-label="Go to Skills section"
+            >
               <FontAwesomeIcon icon={faJsSquare} />
-            </div>
-            <div className="floating-icon floating-icon-3">
+            </a>
+            <a
+              href="#skills"
+              className="floating-icon floating-icon-3"
+              aria-label="Go to Skills section"
+            >
               <FontAwesomeIcon icon={faCss3Alt} />
-            </div>
-            <div className="floating-icon floating-icon-4">
+            </a>
+            <a
+              href="#skills"
+              className="floating-icon floating-icon-4"
+              aria-label="Go to Skills section"
+            >
               <FontAwesomeIcon icon={faHtml5} />
-            </div>
-            <div className="floating-icon floating-icon-5">
+            </a>
+            <a
+              href="#skills"
+              className="floating-icon floating-icon-5"
+              aria-label="Go to Skills section"
+            >
               <FontAwesomeIcon icon={faNodeJs} />
-            </div>
+            </a>
           </div>
         </div>
       </div>

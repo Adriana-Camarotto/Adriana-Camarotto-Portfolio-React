@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
@@ -99,6 +99,54 @@ const LivewireIcon = () => (
 );
 
 export default function Skills() {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    let animationId;
+    const fontSize = 14;
+    let columns;
+    let drops;
+
+    const resize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+      columns = Math.floor(canvas.width / fontSize);
+      drops = Array(columns).fill(1);
+    };
+
+    resize();
+    window.addEventListener("resize", resize);
+
+    const draw = () => {
+      ctx.fillStyle = "rgba(10, 25, 47, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#64ffda";
+      ctx.font = `${fontSize}px "Fira Code", monospace`;
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = Math.random() > 0.5 ? "1" : "0";
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+
+      animationId = requestAnimationFrame(draw);
+    };
+
+    draw();
+
+    return () => {
+      cancelAnimationFrame(animationId);
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
+
   const skills = [
     { name: "HTML", icon: faHtml5 },
     { name: "CSS", icon: faCss3Alt },
@@ -124,6 +172,18 @@ export default function Skills() {
 
   return (
     <section id="skills" className="skills-section reveal">
+      <canvas
+        ref={canvasRef}
+        className="skills-matrix-canvas"
+        aria-hidden="true"
+      />
+      <div className="skills-matrix-overlay" aria-hidden="true"></div>
+      <div className="section-deco">
+        <span className="section-deco-tag">&lt;skills&gt;</span>
+        <span className="section-deco-tag section-deco-close">
+          &lt;/skills&gt;
+        </span>
+      </div>
       <div className="section-inner">
         <h2 className="numbered-heading">
           <span className="heading-num">&lt;/&gt;</span> Skills &amp;

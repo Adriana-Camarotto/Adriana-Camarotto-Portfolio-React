@@ -63,6 +63,10 @@ const other = [
 function Projects() {
   return (
     <section id="projects" className="projects-section reveal">
+      <div className="section-deco">
+        <span className="section-deco-tag">&lt;projects&gt;</span>
+        <span className="section-deco-tag section-deco-close">&lt;/projects&gt;</span>
+      </div>
       <div className="section-inner">
         <h2 className="numbered-heading">
           <span className="heading-num">&lt;/&gt;</span> Some Things I've Built
