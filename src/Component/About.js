@@ -1,5 +1,5 @@
 import React from "react";
-import myPhoto2 from "../Assets/myPhoto2.png";
+import myPhoto2 from "../Assets/myPhoto2.webp";
 
 function About() {
   const softSkills = [

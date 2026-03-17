@@ -98,7 +98,7 @@ export default function Header() {
             <FontAwesomeIcon icon={faGithub} /> Github
           </a>
           <a
-            href="mailto:adriana.camarotto@outlook.com"
+            href="mailto:adriana.camarotto@gmail.com"
             className="navbar-email-btn"
             aria-label="Email"
           >

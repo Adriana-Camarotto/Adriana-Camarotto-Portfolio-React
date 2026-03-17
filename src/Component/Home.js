@@ -7,7 +7,7 @@ import {
   faHtml5,
   faNodeJs,
 } from "@fortawesome/free-brands-svg-icons";
-import myPhoto from "../Assets/AdriProfileImg.png";
+import myPhoto from "../Assets/AdriProfileImg.webp";
 import resume from "../Assets/adriana_camarotto_cv_mar_2026.docx";
 
 function Home() {

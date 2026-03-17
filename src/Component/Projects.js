@@ -1,8 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import Notes from "../Assets/screenshotNotes.png";
-import MySpotify from "../Assets/screenshoSpotify.png";
+import Notes from "../Assets/screenshotNotes.webp";
+import MySpotify from "../Assets/screenshoSpotify.webp";
 
 const featured = [
   {
