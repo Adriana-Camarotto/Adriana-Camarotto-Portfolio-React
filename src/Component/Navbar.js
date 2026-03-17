@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import resume from "../Assets/CV0224.pdf";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -2,20 +2,6 @@ import React from "react";
 import myPhoto2 from "../Assets/myPhoto2.png";
 
 function About() {
-  const technologies = [
-    "JavaScript (ES6+)",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Tailwind CSS",
-    "Statamic",
-    "Alpine.js",
-    "Laravel",
-    "Livewire",
-    "WordPress",
-  ];
-
   const softSkills = [
     "Attention to Detail",
     "Team Collaboration",
@@ -91,7 +77,7 @@ function About() {
           <div className="about-name-wrapper">
             <span className="about-name">Adri Camarotto</span>
             <span className="about-name-role">
-              // Frontend Developer &amp; coffee lover
+              {"//"} Frontend Developer &amp; coffee lover
             </span>
           </div>
 

@@ -14,8 +14,6 @@ import {
   faLaravel,
 } from "@fortawesome/free-brands-svg-icons";
 
-const PAYLOAD_LOGO = null;
-const NEXTJS_LOGO = null;
 const WORDPRESS_LOGO =
   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg";
 const MATERIALUI_LOGO =
@@ -36,21 +34,6 @@ const NextjsIcon = () => (
   </svg>
 );
 
-const PayloadIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 25 25"
-    width="1em"
-    height="1em"
-    className="skill-icon svg-icon"
-  >
-    <path
-      fill="currentColor"
-      d="M11.5293 0L23 6.90096V17.9978L14.3608 12.8866V23.9835L2.88452 17.0825V6.00118L11.5293 0ZM11.5293 2.62948L5.06195 6.56998L11.494 10.5765L17.9614 6.56438L11.5293 2.62948ZM4.94671 8.6277V15.9397L12.2986 20.2921V12.8866L4.94671 8.6277Z"
-    />
-  </svg>
-);
-
 const StatamicIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -65,8 +48,6 @@ const StatamicIcon = () => (
     />
   </svg>
 );
-
-const TallStackIcon = () => null;
 
 const AlpineIcon = () => (
   <svg
