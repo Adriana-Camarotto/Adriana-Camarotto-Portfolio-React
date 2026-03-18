@@ -78,7 +78,7 @@ function Projects() {
           {featured.map((project, index) => (
             <div
               key={index}
-              className={`featured-project ${index % 2 !== 0 ? "reverse" : ""}`}
+              className={`featured-project ${index % 2 !== 0 ? "reverse" : ""} ${index % 2 === 0 ? "slide-from-right" : "slide-from-left"}`}
             >
               <div className="project-image-wrap">
                 <a href={project.liveUrl} target="_blank" rel="noreferrer">

@@ -1560,6 +1560,29 @@ img {
   transform: translateY(0);
 }
 
+/* ── Slide-in animations for featured projects ── */
+.slide-from-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+}
+
+.slide-from-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+}
+
+.slide-from-right.revealed,
+.slide-from-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /* ── Hero Fade-In ── */
 .fade-in {
   opacity: 0;
