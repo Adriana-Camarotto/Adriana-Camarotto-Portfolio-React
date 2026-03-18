@@ -61,7 +61,9 @@ function App() {
       { threshold: 0.05, rootMargin: "0px 0px -50px 0px" },
     );
 
-    const elements = document.querySelectorAll(".reveal, .slide-from-right, .slide-from-left");
+    const elements = document.querySelectorAll(
+      ".reveal, .slide-from-right, .slide-from-left",
+    );
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
