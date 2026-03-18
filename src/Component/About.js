@@ -40,12 +40,25 @@ function About() {
               enhanced performance and design flexibility.
             </p>
             <p>
-              My journey into tech started when I co-founded a tech startup in
-              Brazil, which introduced me to the power of digital innovation.
-              After that, I spent over three years at Tesco in customer-facing
-              roles — experiences that gave me a strong foundation in empathy,
-              active listening, and delivering human-centered solutions under
-              pressure.
+              My journey into tech began when I co-founded a startup in Brazil,
+              sparking my passion for digital innovation.
+            </p>
+            <p>
+              After relocating to the UK, I spent over three years at Tesco,
+              where I progressed into a pharmacy role — quickly earning a
+              promotion into a position responsible for the safe and accurate
+              dispensing of prescribed medications. This experience strengthened
+              my attention to detail, accountability, and ability to operate in
+              high-stakes, regulated environments.
+            </p>
+            <p>
+              At the same time, I was completing an{" "}
+              <span className="highlight">
+                intensive Front-End Web Development bootcamp with edX
+              </span>{" "}
+              — balancing hands-on patient care with building real-world digital
+              products. This dual experience sharpened both my technical skills
+              and my ability to deliver human-centered solutions under pressure.
             </p>
             <p>
               I also volunteered as a mentor in the{" "}
