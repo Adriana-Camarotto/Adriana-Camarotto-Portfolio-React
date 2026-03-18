@@ -52,9 +52,9 @@ function About() {
               high-stakes, regulated environments.
             </p>
             <p>
-              At the same time, I was completing an{" "}
+              At the same time, I was completing an intensive{" "}
               <span className="highlight">
-                intensive Front-End Web Development bootcamp with edX
+                Front-End Web Development bootcamp with edX
               </span>{" "}
               — balancing hands-on patient care with building real-world digital
               products. This dual experience sharpened both my technical skills
