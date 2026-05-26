@@ -53,10 +53,6 @@ const StatamicIcon = () => (
   </svg>
 );
 
-
-
-
-
 export default function Skills() {
   const canvasRef = useRef(null);
 
