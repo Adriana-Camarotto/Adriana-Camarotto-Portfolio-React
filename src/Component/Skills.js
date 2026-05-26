@@ -18,6 +18,10 @@ const WORDPRESS_LOGO =
   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg";
 const MATERIALUI_LOGO =
   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg";
+const LIVEWIRE_LOGO =
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/livewire/livewire-original.svg";
+const ALPINE_LOGO =
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/alpinejs/alpinejs-original.svg";
 
 const NextjsIcon = () => (
   <svg
@@ -49,35 +53,9 @@ const StatamicIcon = () => (
   </svg>
 );
 
-const AlpineIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 128 128"
-    width="1em"
-    height="1em"
-    className="skill-icon svg-icon"
-  >
-    <path
-      fill="currentColor"
-      d="M96 36L64 68 32 36 0 68l32 32 32-32 32 32 32-32z"
-    />
-  </svg>
-);
 
-const LivewireIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    width="1em"
-    height="1em"
-    className="skill-icon svg-icon"
-  >
-    <path
-      fill="currentColor"
-      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5v-3.07c-1.23-.37-2.22-1.17-2.8-2.18l1.46-1.46c.45.72 1.14 1.26 1.96 1.48V8.5L8.5 5.38 12 2l3.5 3.38L12 8.5v3.77c.82-.22 1.51-.76 1.96-1.48l1.46 1.46c-.58 1.01-1.57 1.81-2.8 2.18v3.07H11z"
-    />
-  </svg>
-);
+
+
 
 export default function Skills() {
   const canvasRef = useRef(null);
@@ -145,9 +123,9 @@ export default function Skills() {
     { name: "Figma", icon: faFigma },
     { name: "WordPress", icon: null, image: WORDPRESS_LOGO },
     { name: "Statamic", icon: null, customIcon: StatamicIcon },
-    { name: "Alpine.js", icon: null, customIcon: AlpineIcon },
+    { name: "Alpine.js", icon: null, image: ALPINE_LOGO },
     { name: "Laravel", icon: faLaravel },
-    { name: "Livewire", icon: null, customIcon: LivewireIcon },
+    { name: "Livewire", icon: null, image: LIVEWIRE_LOGO },
     { name: "npm", icon: faNpm },
   ];
 

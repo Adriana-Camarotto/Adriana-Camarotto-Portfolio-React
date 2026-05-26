@@ -186,6 +186,10 @@ img {
   color: var(--accent);
 }
 
+.navbar-social-label {
+  display: none;
+}
+
 .navbar-email-btn {
   display: flex;
   align-items: center;
@@ -1668,6 +1672,10 @@ img {
     justify-content: center;
   }
 
+  .navbar-social-label {
+    display: inline;
+  }
+
   .hero {
     padding: 0 25px;
   }
@@ -1777,5 +1785,117 @@ img {
 
   .skills-grid {
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  }
+}
+
+/* ── Tablet ── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Navbar */
+  .navbar {
+    padding: 0 30px;
+  }
+
+  .navbar-social {
+    margin-left: 10px;
+    gap: 4px;
+  }
+
+  .navbar-social-link {
+    font-size: 0.78rem;
+    padding: 6px 6px;
+  }
+
+  /* Side elements — recuar para não sobrepor o conteúdo */
+  .side-social {
+    left: 16px;
+  }
+
+  .side-email {
+    right: 16px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 0 40px;
+    min-height: 80vh;
+  }
+
+  .hero-content {
+    gap: 20px;
+  }
+
+  .hero-photo-area {
+    width: 340px;
+    height: 390px;
+  }
+
+  .hero-circle-bg {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-photo-wrapper {
+    width: 310px;
+  }
+
+  .hero-name {
+    font-size: clamp(2.5rem, 5.5vw, 3.4rem);
+  }
+
+  /* Sections */
+  .section-inner {
+    padding: 70px 40px;
+  }
+
+  /* About */
+  .about-intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  /* Experience */
+  .experience-content {
+    gap: 20px;
+  }
+
+  .exp-tabs {
+    min-width: 130px;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  /* Featured projects — comprimir colunas para caber em tablet */
+  .featured-project .project-image-wrap {
+    grid-column: 1 / 7;
+  }
+
+  .featured-project .project-content {
+    grid-column: 5 / -1;
+  }
+
+  .featured-project.reverse .project-image-wrap {
+    grid-column: 7 / -1;
+  }
+
+  .featured-project.reverse .project-content {
+    grid-column: 1 / 9;
+  }
+
+  /* Other projects */
+  .other-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* WLB hobbies */
+  .wlb-hobbies {
+    gap: 20px;
+  }
+
+  .wlb-hobby-item {
+    min-width: 110px;
+    padding: 16px 18px;
   }
 }

@@ -86,7 +86,8 @@ export default function Header() {
             className="navbar-social-link"
             aria-label="LinkedIn"
           >
-            <FontAwesomeIcon icon={faLinkedinIn} /> LinkedIn
+            <FontAwesomeIcon icon={faLinkedinIn} />
+            <span className="navbar-social-label">LinkedIn</span>
           </a>
           <a
             href="https://github.com/Adriana-Camarotto"
@@ -95,7 +96,8 @@ export default function Header() {
             className="navbar-social-link"
             aria-label="GitHub"
           >
-            <FontAwesomeIcon icon={faGithub} /> Github
+            <FontAwesomeIcon icon={faGithub} />
+            <span className="navbar-social-label">Github</span>
           </a>
           <a
             href="mailto:adriana.camarotto@gmail.com"

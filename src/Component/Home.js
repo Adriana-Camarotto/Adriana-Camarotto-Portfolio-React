@@ -11,7 +11,8 @@ import myPhoto from "../Assets/AdriProfileImg.webp";
 import resume from "../Assets/adriana_camarotto_cv_mar_2026.docx";
 
 function Home() {
-  const fullText = "Frontend Developer";
+  const fullText = `Front-End Developer specialised in React, Next.js and modern CMS architectures.
+Building performant, responsive and scalable user experiences.`;
   const [displayText, setDisplayText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
 
@@ -39,7 +40,7 @@ function Home() {
             <span className="code-tag">&lt;/html&gt;</span>
             <span className="code-tag code-indent">&lt;body&gt;</span>
           </div>
-          <p className="hero-code-label">&lt;h/&gt;</p>
+          <p className="hero-code-label">&lt;h1/&gt;</p>
           <h1 className="hero-name">
             Hello
             <br />
