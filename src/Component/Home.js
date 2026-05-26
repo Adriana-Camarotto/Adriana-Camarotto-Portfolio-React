@@ -43,7 +43,7 @@ Building performant, responsive and scalable user experiences.`;
           <p className="hero-code-label">&lt;h1/&gt;</p>
           <h1 className="hero-name">
             Hello
-            <br />
+            <br className="hero-br-hide" />
             I'm <span className="highlight">Adri,</span>
             <br />
             Web developer

@@ -1677,7 +1677,15 @@ img {
   }
 
   .hero {
-    padding: 0 25px;
+    padding: 3.75rem 25px 0;
+  }
+
+  .hero .section-deco {
+    padding-top: 20px;
+  }
+
+  .hero-br-hide {
+    display: none;
   }
 
   .hero-content {
@@ -1816,7 +1824,7 @@ img {
 
   /* Hero */
   .hero {
-    padding: 0 40px;
+    padding: 0 90px;
     min-height: 80vh;
   }
 
@@ -1844,7 +1852,8 @@ img {
 
   /* Sections */
   .section-inner {
-    padding: 70px 40px;
+    padding: 70px 90px;
+    max-width: 860px;
   }
 
   /* About */
