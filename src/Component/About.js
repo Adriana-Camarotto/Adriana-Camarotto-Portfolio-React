@@ -45,7 +45,7 @@ function About() {
             </p>
             <p>
               After relocating to the UK, I spent over three years at Tesco,
-              where I progressed into a pharmacy role — quickly earning a
+              where I progressed into a pharmacy role, quickly earning a
               promotion into a position responsible for the safe and accurate
               dispensing of prescribed medications. This experience strengthened
               my attention to detail, accountability, and ability to operate in
@@ -56,14 +56,15 @@ function About() {
               <span className="highlight">
                 Front-End Web Development bootcamp with edX
               </span>{" "}
-              — balancing hands-on patient care with building real-world digital
+              while balancing hands-on patient care with building real-world
+              digital
               products. This dual experience sharpened both my technical skills
               and my ability to deliver human-centered solutions under pressure.
             </p>
             <p>
               I also volunteered as a mentor in the{" "}
               <span className="highlight">Technovation Challenge</span>, guiding
-              girls in creating socially impactful apps — reflecting my
+              girls in creating socially impactful apps, reflecting my
               commitment to inclusive and purpose-driven technology.
             </p>
           </div>

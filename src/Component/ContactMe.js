@@ -17,7 +17,7 @@ function ContactUs() {
         <p className="contact-description">
           I'm currently open to new opportunities and my inbox is always open.
           Whether you have a question, a project in mind, or just want to say
-          hello — I'll do my best to get back to you!
+          hello, I'll do my best to get back to you!
         </p>
         <a className="contact-btn" href="mailto:adriana.camarotto@gmail.com">
           <span className="contact-btn-icon">&#9993;</span>
