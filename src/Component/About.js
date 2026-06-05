@@ -63,7 +63,15 @@ function About() {
             </p>
             <p>
               I also volunteered as a mentor in the{" "}
-              <span className="highlight">Technovation Challenge</span>, guiding
+              <a
+                href="https://technovationchallenge.org/"
+                target="_blank"
+                rel="noreferrer"
+                className="highlight"
+              >
+                Technovation Challenge
+              </a>
+              , guiding
               girls in creating socially impactful apps, reflecting my
               commitment to inclusive and purpose-driven technology.
             </p>
