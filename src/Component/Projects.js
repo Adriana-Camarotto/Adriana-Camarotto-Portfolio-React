@@ -6,6 +6,17 @@ import MySpotify from "../Assets/screenshoSpotify.webp";
 
 const featured = [
   {
+    title: "Personal Finance Planner",
+    image:
+      "https://raw.githubusercontent.com/Adriana-Camarotto/personal-finance-planner/main/screenshots/01-home.png",
+    description:
+      "A personal finance planner to track income, expenses, and financial goals through an intuitive local-first interface.",
+    liveUrl: "https://personal-finance-planner-local.netlify.app/",
+    githubUrl:
+      "https://github.com/Adriana-Camarotto/personal-finance-planner/tree/main",
+    tech: ["React", "Material UI", "Chart.js", "LocalStorage"],
+  },
+  {
     title: "My Spotify",
     image: MySpotify,
     description:

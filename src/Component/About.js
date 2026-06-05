@@ -57,9 +57,9 @@ function About() {
                 Front-End Web Development bootcamp with edX
               </span>{" "}
               while balancing hands-on patient care with building real-world
-              digital
-              products. This dual experience sharpened both my technical skills
-              and my ability to deliver human-centered solutions under pressure.
+              digital products. This dual experience sharpened both my technical
+              skills and my ability to deliver human-centered solutions under
+              pressure.
             </p>
             <p>
               I also volunteered as a mentor in the{" "}
