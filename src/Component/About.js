@@ -71,8 +71,7 @@ function About() {
               >
                 Technovation Challenge
               </a>
-              , guiding
-              girls in creating socially impactful apps, reflecting my
+              , guiding girls in creating socially impactful apps, reflecting my
               commitment to inclusive and purpose-driven technology.
             </p>
           </div>
