@@ -31,38 +31,27 @@ function About() {
         <div className="about-intro">
           <div className="about-text">
             <p>
-              I'm a Front-End Developer with over 2 years of experience, focused
-              on building inclusive, responsive, and user-centered digital
-              experiences. Currently working as a{" "}
-              <span className="highlight">Web Developer at Alt Design</span>, I
-              build interfaces using modern technologies and develop custom
-              WordPress and Statamic sites, leveraging headless architecture for
-              enhanced performance and design flexibility.
+              I'm a Front-End Developer with 3 years of commercial experience
+              building responsive, accessible, and user-centered web
+              applications in the UK.
             </p>
             <p>
-              My journey into tech began when I co-founded a startup in Brazil,
-              sparking my passion for digital innovation.
+              My technical work spans two digital agencies, where I've delivered
+              projects across React, Next.js, TypeScript, the TALL stack,
+              headless CMS architecture, and API integrations. I enjoy working
+              across the full front-end spectrum, from building reusable
+              component libraries to developing custom CMS add-ons and
+              integrating third-party services.
             </p>
             <p>
-              After relocating to the UK, I spent over three years at Tesco,
-              where I progressed into a pharmacy role, quickly earning a
-              promotion into a position responsible for the safe and accurate
-              dispensing of prescribed medications. This experience strengthened
-              my attention to detail, accountability, and ability to operate in
-              high-stakes, regulated environments.
+              My path into tech isn't conventional. I co-founded and managed a
+              technology company in Brazil for over five years, which gave me a
+              commercial mindset and a genuine understanding of what software
+              needs to do beyond looking good.
             </p>
             <p>
-              At the same time, I was completing an intensive{" "}
-              <span className="highlight">
-                Front-End Web Development bootcamp with edX
-              </span>{" "}
-              while balancing hands-on patient care with building real-world
-              digital products. This dual experience sharpened both my technical
-              skills and my ability to deliver human-centered solutions under
-              pressure.
-            </p>
-            <p>
-              I also volunteered as a mentor in the{" "}
+              After relocating to the UK, I transitioned fully into development,
+              completing an intensive bootcamp, volunteering as a mentor in the{" "}
               <a
                 href="https://technovationchallenge.org/"
                 target="_blank"
@@ -70,9 +59,20 @@ function About() {
                 className="highlight"
               >
                 Technovation Challenge
-              </a>
-              , guiding girls in creating socially impactful apps, reflecting my
-              commitment to inclusive and purpose-driven technology.
+              </a>{" "}
+              to support girls building socially impactful apps, and landing my
+              first developer role within a year.
+            </p>
+            <p>
+              I build things outside of work too. I'm currently developing a
+              freelance booking platform with React, Supabase and Stripe, and
+              Job Tracker, an AI-powered job application tool that integrates
+              the Claude API for real-time CV adaptation, cover letter
+              generation, and job match scoring.
+            </p>
+            <p>
+              I care about code that's clean, maintainable, and built for real
+              people.
             </p>
           </div>
 
