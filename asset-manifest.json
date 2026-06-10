@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Adriana-Camarotto-Portfolio-React/static/css/main.24265156.css",
+    "main.js": "/Adriana-Camarotto-Portfolio-React/static/js/main.2f1e5e2d.js",
+    "static/js/453.93462478.chunk.js": "/Adriana-Camarotto-Portfolio-React/static/js/453.93462478.chunk.js",
+    "static/media/screenshoSpotify.webp": "/Adriana-Camarotto-Portfolio-React/static/media/screenshoSpotify.ea31c00eb3f7fde368c8.webp",
+    "static/media/myPhoto2.webp": "/Adriana-Camarotto-Portfolio-React/static/media/myPhoto2.c4a1952cc8a227a9fb49.webp",
+    "static/media/AdriProfileImg.webp": "/Adriana-Camarotto-Portfolio-React/static/media/AdriProfileImg.b6e695b0bf82ea885861.webp",
+    "static/media/adriana_camarotto_cv_mar_2026.docx": "/Adriana-Camarotto-Portfolio-React/static/media/adriana_camarotto_cv_mar_2026.330f6626ff0885d9bcb6.docx",
+    "static/media/screenshotNotes.webp": "/Adriana-Camarotto-Portfolio-React/static/media/screenshotNotes.418d77f6d9bbf86e5304.webp",
+    "index.html": "/Adriana-Camarotto-Portfolio-React/index.html",
+    "main.24265156.css.map": "/Adriana-Camarotto-Portfolio-React/static/css/main.24265156.css.map",
+    "main.2f1e5e2d.js.map": "/Adriana-Camarotto-Portfolio-React/static/js/main.2f1e5e2d.js.map",
+    "453.93462478.chunk.js.map": "/Adriana-Camarotto-Portfolio-React/static/js/453.93462478.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24265156.css",
+    "static/js/main.2f1e5e2d.js"
+  ]
+}
