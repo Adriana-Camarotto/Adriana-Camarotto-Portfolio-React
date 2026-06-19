@@ -28,7 +28,7 @@ Building performant, responsive and scalable user experiences.`;
 
   return (
     <section id="home" className="hero">
-      <div className="section-deco">
+      <div className="section-deco" aria-hidden="true">
         <span className="section-deco-tag">&lt;home&gt;</span>
         <span className="section-deco-tag section-deco-close">
           &lt;/home&gt;
@@ -36,31 +36,42 @@ Building performant, responsive and scalable user experiences.`;
       </div>
       <div className="hero-content">
         <div className="hero-text fade-in">
-          <div className="code-decorations">
+          <div className="code-decorations" aria-hidden="true">
             <span className="code-tag">&lt;/html&gt;</span>
             <span className="code-tag code-indent">&lt;body&gt;</span>
           </div>
-          <p className="hero-code-label">&lt;h1/&gt;</p>
+          <p className="hero-code-label" aria-hidden="true">
+            &lt;h1/&gt;
+          </p>
           <h1 className="hero-name">
-            Hello
+            Hello{" "}
             <br className="hero-br-hide" />
             I'm <span className="highlight">Adri,</span>
             <br />
             Web developer
           </h1>
-          <p className="hero-code-label">&lt;h1/&gt;</p>
-          <p className="hero-code-label">&lt;p&gt;</p>
+          <p className="hero-code-label" aria-hidden="true">
+            &lt;h1/&gt;
+          </p>
+          <p className="hero-code-label" aria-hidden="true">
+            &lt;p&gt;
+          </p>
           <h2 className="hero-subtitle">
             {displayText}
-            <span className="typing-cursor">|</span>
+            <span className="typing-cursor" aria-hidden="true">
+              |
+            </span>
           </h2>
-          <p className="hero-code-label">&lt;p/&gt;</p>
+          <p className="hero-code-label" aria-hidden="true">
+            &lt;p/&gt;
+          </p>
           <div className="hero-cta-group">
             <a
               href={resume}
               target="_blank"
               rel="noreferrer"
               className="hero-cta"
+              aria-label="View my CV (opens in a new tab, Word document)"
             >
               View my CV
             </a>
@@ -84,35 +95,39 @@ Building performant, responsive and scalable user experiences.`;
               className="floating-icon floating-icon-1"
               aria-label="Go to Skills section"
             >
-              <FontAwesomeIcon icon={faReact} />
+              <FontAwesomeIcon icon={faReact} aria-hidden="true" />
             </a>
             <a
               href="#skills"
               className="floating-icon floating-icon-2"
-              aria-label="Go to Skills section"
+              aria-hidden="true"
+              tabIndex={-1}
             >
-              <FontAwesomeIcon icon={faJsSquare} />
+              <FontAwesomeIcon icon={faJsSquare} aria-hidden="true" />
             </a>
             <a
               href="#skills"
               className="floating-icon floating-icon-3"
-              aria-label="Go to Skills section"
+              aria-hidden="true"
+              tabIndex={-1}
             >
-              <FontAwesomeIcon icon={faCss3Alt} />
+              <FontAwesomeIcon icon={faCss3Alt} aria-hidden="true" />
             </a>
             <a
               href="#skills"
               className="floating-icon floating-icon-4"
-              aria-label="Go to Skills section"
+              aria-hidden="true"
+              tabIndex={-1}
             >
-              <FontAwesomeIcon icon={faHtml5} />
+              <FontAwesomeIcon icon={faHtml5} aria-hidden="true" />
             </a>
             <a
               href="#skills"
               className="floating-icon floating-icon-5"
-              aria-label="Go to Skills section"
+              aria-hidden="true"
+              tabIndex={-1}
             >
-              <FontAwesomeIcon icon={faNodeJs} />
+              <FontAwesomeIcon icon={faNodeJs} aria-hidden="true" />
             </a>
           </div>
         </div>

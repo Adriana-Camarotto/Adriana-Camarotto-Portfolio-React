@@ -3,7 +3,7 @@ import React from "react";
 function ContactUs() {
   return (
     <section id="contact" className="contact-section reveal">
-      <div className="contact-bg-decoration">
+      <div className="contact-bg-decoration" aria-hidden="true">
         <span className="contact-deco-tag">&lt;contact&gt;</span>
         <span className="contact-deco-tag contact-deco-close">
           &lt;/contact&gt;
@@ -11,7 +11,10 @@ function ContactUs() {
       </div>
       <div className="section-inner contact-inner">
         <p className="contact-overline">
-          <span className="heading-num">&lt;/&gt;</span> What's Next?
+          <span className="heading-num" aria-hidden="true">
+            &lt;/&gt;
+          </span>{" "}
+          What's Next?
         </p>
         <h2 className="contact-title">Get In Touch</h2>
         <p className="contact-description">
@@ -20,7 +23,9 @@ function ContactUs() {
           hello, I'll do my best to get back to you!
         </p>
         <a className="contact-btn" href="mailto:adriana.camarotto@gmail.com">
-          <span className="contact-btn-icon">&#9993;</span>
+          <span className="contact-btn-icon" aria-hidden="true">
+            &#9993;
+          </span>
           Say Hello
         </a>
       </div>

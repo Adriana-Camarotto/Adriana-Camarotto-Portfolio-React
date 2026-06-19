@@ -11,6 +11,7 @@ import Projects from "./Component/Projects";
 import ContactMe from "./Component/ContactMe";
 import Header from "./Component/Navbar";
 import Footer from "./Component/Footer";
+import AccessibilityToolbar from "./Component/AccessibilityToolbar";
 
 function ScrollToTop() {
   const [visible, setVisible] = useState(false);
@@ -71,6 +72,9 @@ function App() {
 
   return (
     <>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <Header />
 
       {/* Left sidebar - Social links */}
@@ -106,7 +110,7 @@ function App() {
         </a>
       </div>
 
-      <main className="main-content">
+      <main className="main-content" id="main-content">
         <Home />
         <About />
         <Experience />
@@ -116,6 +120,7 @@ function App() {
       </main>
       <Footer />
       <ScrollToTop />
+      <AccessibilityToolbar />
     </>
   );
 }

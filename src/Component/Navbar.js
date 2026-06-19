@@ -38,38 +38,53 @@ export default function Header() {
   ];
 
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+    <nav
+      className={`navbar ${scrolled ? "scrolled" : ""}`}
+      aria-label="Main navigation"
+    >
       <a
         href="#home"
         className="navbar-logo"
         onClick={() => setMenuOpen(false)}
       >
-        <span className="logo-tag">&lt;AC/&gt;</span>
-        <span className="logo-sep">|</span>
+        <span className="logo-tag" aria-hidden="true">
+          &lt;AC/&gt;
+        </span>
+        <span className="logo-sep" aria-hidden="true">
+          |
+        </span>
         <span className="logo-name">Adri Camarotto</span>
       </a>
       <button
         className={`hamburger-btn ${menuOpen ? "open" : ""}`}
         type="button"
         aria-label="Toggle navigation"
+        aria-expanded={menuOpen}
+        aria-controls="navbar-menu"
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </button>
-      <div className={`navbar-menu ${menuOpen ? "open" : ""}`}>
+      <div
+        id="navbar-menu"
+        className={`navbar-menu ${menuOpen ? "open" : ""}`}
+      >
         <ul className="navbar-nav">
           {links.map((link) => (
             <li key={link.id} className="nav-item">
               <a
                 href={link.to}
                 className={`nav-link ${activeSection === link.id ? "active" : ""}`}
+                aria-current={activeSection === link.id ? "page" : undefined}
                 onClick={() => setMenuOpen(false)}
               >
                 {activeSection === link.id ? (
                   <span className="nav-active-bracket">
-                    &lt;{link.label}&gt;
+                    <span aria-hidden="true">&lt;</span>
+                    {link.label}
+                    <span aria-hidden="true">&gt;</span>
                   </span>
                 ) : (
                   link.label
@@ -113,6 +128,7 @@ export default function Header() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              aria-hidden="true"
             >
               <rect x="2" y="4" width="20" height="16" rx="2" />
               <path d="M22 7l-10 7L2 7" />

@@ -17,7 +17,7 @@ function About() {
         <img src={myPhoto2} alt="" aria-hidden="true" />
       </div>
       <div className="about-bg-overlay"></div>
-      <div className="section-deco">
+      <div className="section-deco" aria-hidden="true">
         <span className="section-deco-tag">&lt;about&gt;</span>
         <span className="section-deco-tag section-deco-close">
           &lt;/about&gt;
@@ -25,7 +25,10 @@ function About() {
       </div>
       <div className="section-inner">
         <h2 className="numbered-heading">
-          <span className="heading-num">&lt;/&gt;</span> About Me
+          <span className="heading-num" aria-hidden="true">
+            &lt;/&gt;
+          </span>{" "}
+          About Me
         </h2>
 
         <div className="about-intro">
@@ -57,6 +60,7 @@ function About() {
                 target="_blank"
                 rel="noreferrer"
                 className="highlight"
+                aria-label="Technovation Challenge (opens in a new tab)"
               >
                 Technovation Challenge
               </a>{" "}
@@ -89,7 +93,7 @@ function About() {
         </div>
 
         <div className="about-bottom">
-          <div className="about-divider">
+          <div className="about-divider" aria-hidden="true">
             <span className="divider-line"></span>
             <span className="divider-symbol">&lt;/&gt;</span>
             <span className="divider-line"></span>
@@ -98,16 +102,21 @@ function About() {
           <div className="about-name-wrapper">
             <span className="about-name">Adri Camarotto</span>
             <span className="about-name-role">
-              {"//"} Frontend Developer &amp; coffee lover
+              <span aria-hidden="true">{"//"} </span>Frontend Developer &amp;
+              coffee lover
             </span>
           </div>
 
           <div className="about-wlb">
             <h3 className="wlb-heading">
               <span>WORK</span>
-              <span className="wlb-slash">/</span>
+              <span className="wlb-slash" aria-hidden="true">
+                /
+              </span>
               <span>LIFE</span>
-              <span className="wlb-slash">/</span>
+              <span className="wlb-slash" aria-hidden="true">
+                /
+              </span>
               <span>BALANCE</span>
             </h3>
             <p className="wlb-subtitle">
@@ -115,15 +124,21 @@ function About() {
             </p>
             <div className="wlb-hobbies">
               <div className="wlb-hobby-item">
-                <span className="hobby-icon">&#9998;</span>
+                <span className="hobby-icon" aria-hidden="true">
+                  &#9998;
+                </span>
                 <span className="hobby-label">Creating art</span>
               </div>
               <div className="wlb-hobby-item">
-                <span className="hobby-icon">&#9737;</span>
+                <span className="hobby-icon" aria-hidden="true">
+                  &#9737;
+                </span>
                 <span className="hobby-label">Taking walks</span>
               </div>
               <div className="wlb-hobby-item">
-                <span className="hobby-icon">&#9654;</span>
+                <span className="hobby-icon" aria-hidden="true">
+                  &#9654;
+                </span>
                 <span className="hobby-label">Watching movies</span>
               </div>
             </div>

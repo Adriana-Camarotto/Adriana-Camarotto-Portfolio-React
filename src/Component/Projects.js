@@ -74,7 +74,7 @@ const other = [
 function Projects() {
   return (
     <section id="projects" className="projects-section reveal">
-      <div className="section-deco">
+      <div className="section-deco" aria-hidden="true">
         <span className="section-deco-tag">&lt;projects&gt;</span>
         <span className="section-deco-tag section-deco-close">
           &lt;/projects&gt;
@@ -82,7 +82,10 @@ function Projects() {
       </div>
       <div className="section-inner">
         <h2 className="numbered-heading">
-          <span className="heading-num">&lt;/&gt;</span> Some Things I've Built
+          <span className="heading-num" aria-hidden="true">
+            &lt;/&gt;
+          </span>{" "}
+          Some Things I've Built
         </h2>
 
         <div className="featured-projects">
@@ -92,15 +95,26 @@ function Projects() {
               className={`featured-project ${index % 2 !== 0 ? "reverse" : ""} ${index % 2 === 0 ? "slide-from-right" : "slide-from-left"}`}
             >
               <div className="project-image-wrap">
-                <a href={project.liveUrl} target="_blank" rel="noreferrer">
-                  <img src={project.image} alt={project.title} />
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-hidden="true"
+                  tabIndex={-1}
+                >
+                  <img src={project.image} alt="" />
                   <div className="project-overlay"></div>
                 </a>
               </div>
               <div className="project-content">
                 <p className="project-overline">Featured Project</p>
                 <h3 className="project-title">
-                  <a href={project.liveUrl} target="_blank" rel="noreferrer">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${project.title} (opens live demo in a new tab)`}
+                  >
                     {project.title}
                   </a>
                 </h3>
@@ -117,15 +131,15 @@ function Projects() {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="GitHub"
+                    aria-label={`${project.title} on GitHub (opens in a new tab)`}
                   >
-                    <FontAwesomeIcon icon={faGithub} />
+                    <FontAwesomeIcon icon={faGithub} aria-hidden="true" />
                   </a>
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="Live demo"
+                    aria-label={`${project.title} live demo (opens in a new tab)`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -137,6 +151,7 @@ function Projects() {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
+                      aria-hidden="true"
                     >
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                       <polyline points="15 3 21 3 21 9"></polyline>
@@ -154,7 +169,7 @@ function Projects() {
           {other.map((project, index) => (
             <div key={index} className="other-project-card">
               <div className="card-header">
-                <div className="folder-icon">
+                <div className="folder-icon" aria-hidden="true">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="40"
@@ -174,15 +189,15 @@ function Projects() {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="GitHub"
+                    aria-label={`${project.title} on GitHub (opens in a new tab)`}
                   >
-                    <FontAwesomeIcon icon={faGithub} />
+                    <FontAwesomeIcon icon={faGithub} aria-hidden="true" />
                   </a>
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="Live demo"
+                    aria-label={`${project.title} live demo (opens in a new tab)`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -194,6 +209,7 @@ function Projects() {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
+                      aria-hidden="true"
                     >
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                       <polyline points="15 3 21 3 21 9"></polyline>

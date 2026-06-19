@@ -4,25 +4,25 @@ import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-social">
+    <footer className="footer" role="contentinfo">
+      <nav className="footer-social" aria-label="Social links">
         <a
           href="https://github.com/Adriana-Camarotto"
           target="_blank"
           rel="noreferrer"
-          aria-label="GitHub"
+          aria-label="GitHub (opens in a new tab)"
         >
-          <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon icon={faGithub} aria-hidden="true" />
         </a>
         <a
           href="https://www.linkedin.com/in/adriana-camarotto/"
           target="_blank"
           rel="noreferrer"
-          aria-label="LinkedIn"
+          aria-label="LinkedIn (opens in a new tab)"
         >
-          <FontAwesomeIcon icon={faLinkedinIn} />
+          <FontAwesomeIcon icon={faLinkedinIn} aria-hidden="true" />
         </a>
-      </div>
+      </nav>
       <p className="footer-credit">
         &copy; Copyright {new Date().getFullYear()} | All Rights Reserved.
       </p>

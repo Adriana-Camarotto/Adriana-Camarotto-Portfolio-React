@@ -1,0 +1,309 @@
+/* ── Accessibility Toolbar ── */
+
+.a11y-toolbar-wrapper {
+  position: fixed;
+  top: 80px;
+  right: 50px;
+  z-index: 1000;
+  font-family: var(--font-sans);
+}
+
+.a11y-toggle-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.a11y-toggle-btn:hover,
+.a11y-toggle-btn:focus {
+  transform: scale(1.1);
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.a11y-panel {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px;
+  width: 280px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.a11y-panel-title {
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  margin-top: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--accent);
+}
+
+.a11y-control {
+  margin-bottom: 12px;
+}
+
+.a11y-control-title {
+  display: block;
+  color: var(--text-primary);
+  font-size: 1.075rem;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.a11y-control-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.a11y-control-row button {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a11y-control-row button:hover,
+.a11y-control-row button:focus {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.a11y-value {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  min-width: 50px;
+  text-align: center;
+}
+
+.a11y-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-size: 1.075rem;
+  user-select: none;
+}
+
+.a11y-checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--accent);
+}
+
+.a11y-checkbox-label input[type="checkbox"]:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.a11y-reset-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.075rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.a11y-reset-btn:hover,
+.a11y-reset-btn:focus {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Accessibility Override Classes ── */
+
+/* Alto contraste */
+body.a11y-high-contrast {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #e8e8e8;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --accent: #005f73;
+}
+
+body.a11y-high-contrast .navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+body.a11y-high-contrast code {
+  background: #f0f0f0;
+  color: #000000;
+}
+
+body.a11y-high-contrast a {
+  text-decoration: underline;
+}
+
+body.a11y-high-contrast .skill-icon,
+body.a11y-high-contrast .svg-icon {
+  color: var(--text-primary);
+}
+
+body.a11y-high-contrast .skill-icon-img {
+  filter: brightness(0);
+}
+
+/* Sem animações */
+body.a11y-no-motion {
+  --transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+body.a11y-no-motion,
+body.a11y-no-motion * {
+  animation: none !important;
+  animation-name: none !important;
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  animation-iteration-count: 0 !important;
+  transition: none !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
+/* Ensure animated elements still appear in their final state */
+body.a11y-no-motion .fade-in,
+body.a11y-no-motion .fade-in.revealed,
+body.a11y-no-motion .revealed,
+body.a11y-no-motion .reveal,
+body.a11y-no-motion .slide-from-left,
+body.a11y-no-motion .slide-from-right {
+  opacity: 1 !important;
+  transform: translateY(0) translateX(0) !important;
+}
+
+/* Disable specific animations */
+body.a11y-no-motion .float,
+body.a11y-no-motion .typing-cursor,
+body.a11y-no-motion [class*="fadeIn"],
+body.a11y-no-motion [class*="blink"] {
+  animation: none !important;
+}
+
+/* Disable ALL transitions and animations on hover/focus/active */
+body.a11y-no-motion *:hover,
+body.a11y-no-motion *:focus,
+body.a11y-no-motion *:focus-visible,
+body.a11y-no-motion *:active {
+  transition: none !important;
+  animation: none !important;
+  text-shadow: none !important;
+}
+
+/* Specifically ensure photo wrapper doesn't move */
+body.a11y-no-motion .hero-photo-wrapper:hover img {
+  transform: none !important;
+  filter: grayscale(90%) !important;
+}
+
+/* Disable transitions on all elements and pseudo-elements */
+body.a11y-no-motion *::before,
+body.a11y-no-motion *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Override inline transition styles */
+body.a11y-no-motion [style*="transition"] {
+  transition: none !important;
+}
+
+body.a11y-no-motion [style*="transform"] {
+  transform: none !important;
+}
+
+/* Fonte para dislexia */
+body.a11y-dyslexia {
+  --font-sans: "OpenDyslexic", "Inter", sans-serif;
+}
+
+/* Tamanho de fonte — controlado via inline style no JS */
+/* body.a11y-font-large aplicado dinamicamente */
+
+/* Altura de linha */
+body.a11y-line-height * {
+  line-height: 2 !important;
+}
+
+/* Espaçamento de letras */
+body.a11y-letter-spacing * {
+  letter-spacing: 0.08em !important;
+}
+
+/* Desabilitar comportamento de hover em telas sensíveis ao toque */
+@media (hover: none) {
+  .a11y-toggle-btn:active {
+    transform: scale(0.95);
+  }
+}
+
+/* Responsivo para mobile */
+@media (max-width: 640px) {
+  .a11y-toolbar-wrapper {
+    top: 70px;
+    right: 20px;
+  }
+
+  .a11y-panel {
+    width: 260px;
+    top: 60px;
+  }
+
+  .a11y-toggle-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}

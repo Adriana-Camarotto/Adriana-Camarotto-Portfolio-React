@@ -30,6 +30,7 @@ const NextjsIcon = () => (
     width="1em"
     height="1em"
     className="skill-icon svg-icon"
+    aria-hidden="true"
   >
     <path
       fill="currentColor"
@@ -45,6 +46,7 @@ const StatamicIcon = () => (
     width="1em"
     height="1em"
     className="skill-icon svg-icon"
+    aria-hidden="true"
   >
     <path
       fill="currentColor"
@@ -63,6 +65,13 @@ export default function Skills() {
     const fontSize = 14;
     let columns;
     let drops;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    );
+    const hasNoMotion = () =>
+      document.body.classList.contains("a11y-no-motion") ||
+      prefersReducedMotion.matches;
 
     const resize = () => {
       canvas.width = canvas.offsetWidth;
@@ -91,13 +100,15 @@ export default function Skills() {
         drops[i]++;
       }
 
-      animationId = requestAnimationFrame(draw);
+      if (!hasNoMotion()) {
+        animationId = requestAnimationFrame(draw);
+      }
     };
 
     draw();
 
     return () => {
-      cancelAnimationFrame(animationId);
+      if (animationId) cancelAnimationFrame(animationId);
       window.removeEventListener("resize", resize);
     };
   }, []);
@@ -133,7 +144,7 @@ export default function Skills() {
         aria-hidden="true"
       />
       <div className="skills-matrix-overlay" aria-hidden="true"></div>
-      <div className="section-deco">
+      <div className="section-deco" aria-hidden="true">
         <span className="section-deco-tag">&lt;skills&gt;</span>
         <span className="section-deco-tag section-deco-close">
           &lt;/skills&gt;
@@ -141,8 +152,10 @@ export default function Skills() {
       </div>
       <div className="section-inner">
         <h2 className="numbered-heading">
-          <span className="heading-num">&lt;/&gt;</span> Skills &amp;
-          Technologies
+          <span className="heading-num" aria-hidden="true">
+            &lt;/&gt;
+          </span>{" "}
+          Skills &amp; Technologies
         </h2>
         <p className="section-description">
           Through my studies and professional experience, I developed a solid
@@ -155,13 +168,13 @@ export default function Skills() {
               {skill.customIcon ? (
                 <skill.customIcon />
               ) : skill.image ? (
-                <img
-                  src={skill.image}
-                  alt={skill.name}
-                  className="skill-icon-img"
-                />
+                <img src={skill.image} alt="" className="skill-icon-img" />
               ) : (
-                <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
+                <FontAwesomeIcon
+                  icon={skill.icon}
+                  className="skill-icon"
+                  aria-hidden="true"
+                />
               )}
               <span className="skill-name">{skill.name}</span>
             </div>

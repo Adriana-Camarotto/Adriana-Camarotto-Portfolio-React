@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 const Experience = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const tabRefs = useRef([]);
+  const touchStartX = useRef(null);
 
   const experiences = [
     {
@@ -55,11 +57,48 @@ const Experience = () => {
     },
   ];
 
+  const total = experiences.length;
   const active = experiences[activeTab];
+
+  const goTo = (i) => setActiveTab(((i % total) + total) % total);
+  const prevTab = () => goTo(activeTab - 1);
+  const nextTab = () => goTo(activeTab + 1);
+
+  const handleTabKeyDown = (e) => {
+    const last = total - 1;
+    let next = null;
+
+    if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+      next = activeTab === last ? 0 : activeTab + 1;
+    } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+      next = activeTab === 0 ? last : activeTab - 1;
+    } else if (e.key === "Home") {
+      next = 0;
+    } else if (e.key === "End") {
+      next = last;
+    }
+
+    if (next !== null) {
+      e.preventDefault();
+      setActiveTab(next);
+      tabRefs.current[next]?.focus();
+    }
+  };
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return;
+    const delta = e.changedTouches[0].clientX - touchStartX.current;
+    if (Math.abs(delta) > 50) delta < 0 ? nextTab() : prevTab();
+    touchStartX.current = null;
+  };
 
   return (
     <section id="experience" className="experience-section reveal">
-      <div className="section-deco">
+      <div className="section-deco" aria-hidden="true">
         <span className="section-deco-tag">&lt;experience&gt;</span>
         <span className="section-deco-tag section-deco-close">
           &lt;/experience&gt;
@@ -67,25 +106,80 @@ const Experience = () => {
       </div>
       <div className="section-inner">
         <h2 className="numbered-heading">
-          <span className="heading-num">&lt;/&gt;</span> Where I've Worked
+          <span className="heading-num" aria-hidden="true">
+            &lt;/&gt;
+          </span>{" "}
+          Where I've Worked
         </h2>
 
         <div className="experience-content">
-          <div className="exp-tabs" role="tablist">
+          {/* Desktop: vertical tab list */}
+          <div
+            className="exp-tabs"
+            role="tablist"
+            aria-label="Companies"
+            onKeyDown={handleTabKeyDown}
+          >
             {experiences.map((exp, i) => (
               <button
                 key={i}
+                ref={(el) => (tabRefs.current[i] = el)}
+                id={`exp-tab-${i}`}
                 className={`exp-tab ${activeTab === i ? "active" : ""}`}
                 onClick={() => setActiveTab(i)}
                 role="tab"
                 aria-selected={activeTab === i}
+                aria-controls="exp-panel"
+                tabIndex={activeTab === i ? 0 : -1}
               >
                 {exp.company}
               </button>
             ))}
           </div>
 
-          <div className="exp-panel" role="tabpanel">
+          {/* Mobile: carousel navigation */}
+          <div className="exp-carousel-nav" aria-label="Experience navigation">
+            <button
+              className="exp-carousel-btn"
+              onClick={prevTab}
+              aria-label="Previous company"
+            >
+              ‹
+            </button>
+            <div className="exp-carousel-indicators">
+              <span className="exp-carousel-company">{active.company}</span>
+              <div className="exp-carousel-dots" role="tablist" aria-label="Companies">
+                {experiences.map((exp, i) => (
+                  <button
+                    key={i}
+                    className={`exp-carousel-dot ${activeTab === i ? "active" : ""}`}
+                    onClick={() => goTo(i)}
+                    role="tab"
+                    aria-selected={activeTab === i}
+                    aria-label={exp.company}
+                  />
+                ))}
+              </div>
+            </div>
+            <button
+              className="exp-carousel-btn"
+              onClick={nextTab}
+              aria-label="Next company"
+            >
+              ›
+            </button>
+          </div>
+
+          {/* Panel */}
+          <div
+            className="exp-panel"
+            role="tabpanel"
+            id="exp-panel"
+            aria-labelledby={`exp-tab-${activeTab}`}
+            tabIndex={0}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
             <h3 className="exp-title">
               {active.role}{" "}
               <span className="exp-company">@ {active.company}</span>
