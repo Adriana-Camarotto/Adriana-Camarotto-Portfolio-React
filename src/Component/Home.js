@@ -10,20 +10,42 @@ import {
 import myPhoto from "../Assets/AdriProfileImg.webp";
 import resume from "../Assets/adriana_camarotto_cv_mar_2026.docx";
 
+const hasNoMotion = () =>
+  document.body.classList.contains("a11y-no-motion") ||
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 function Home() {
   const fullText = `Front-End Developer specialised in React, Next.js and modern CMS architectures.
 Building performant, responsive and scalable user experiences.`;
-  const [displayText, setDisplayText] = useState("");
-  const [charIndex, setCharIndex] = useState(0);
+  const [displayText, setDisplayText] = useState(() =>
+    hasNoMotion() ? fullText : ""
+  );
+  const [charIndex, setCharIndex] = useState(() =>
+    hasNoMotion() ? fullText.length : 0
+  );
+
+  // Jump to full text when a11y-no-motion is toggled on mid-animation
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      if (hasNoMotion()) {
+        setDisplayText(fullText);
+        setCharIndex(fullText.length);
+      }
+    });
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+    return () => observer.disconnect();
+  }, [fullText]);
 
   useEffect(() => {
-    if (charIndex < fullText.length) {
-      const timeout = setTimeout(() => {
-        setDisplayText(fullText.slice(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
-      }, 80);
-      return () => clearTimeout(timeout);
-    }
+    if (hasNoMotion() || charIndex >= fullText.length) return;
+    const timeout = setTimeout(() => {
+      setDisplayText(fullText.slice(0, charIndex + 1));
+      setCharIndex((i) => i + 1);
+    }, 80);
+    return () => clearTimeout(timeout);
   }, [charIndex, fullText]);
 
   return (

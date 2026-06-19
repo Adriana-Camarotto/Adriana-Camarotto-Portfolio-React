@@ -78,6 +78,36 @@
     opacity: 1 !important;
     transform: none !important;
   }
+
+  /* Cancel transform-based hover lifts — colour changes are kept as they signal interactivity */
+  .wlb-hobby-item:hover,
+  .wlb-hobby-item:hover .hobby-icon,
+  .skill-item:hover,
+  .project-image-wrap:hover img,
+  .other-project-card:hover,
+  .contact-btn:hover,
+  .contact-social-link:hover,
+  .footer-social a:hover,
+  .side-social a:hover,
+  .side-email a:hover,
+  .scroll-top-btn:hover {
+    transform: none !important;
+  }
+}
+
+/* Same overrides for the in-page accessibility toolbar toggle */
+.a11y-no-motion .wlb-hobby-item:hover,
+.a11y-no-motion .wlb-hobby-item:hover .hobby-icon,
+.a11y-no-motion .skill-item:hover,
+.a11y-no-motion .project-image-wrap:hover img,
+.a11y-no-motion .other-project-card:hover,
+.a11y-no-motion .contact-btn:hover,
+.a11y-no-motion .contact-social-link:hover,
+.a11y-no-motion .footer-social a:hover,
+.a11y-no-motion .side-social a:hover,
+.a11y-no-motion .side-email a:hover,
+.a11y-no-motion .scroll-top-btn:hover {
+  transform: none !important;
 }
 
 html {
