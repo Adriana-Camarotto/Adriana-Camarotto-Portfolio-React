@@ -27,7 +27,11 @@ function ScrollToTop() {
 
   return (
     <button
-      className={`scroll-top-btn ${visible ? "visible" : ""}`}
+      className={`fixed bottom-[20px] right-[25px] sm:bottom-[30px] sm:right-[50px] w-11 h-11 rounded-full bg-accent text-bg-primary border-none cursor-pointer flex items-center justify-center z-[999] transition-[opacity,visibility,transform] duration-300 hover:bg-[rgba(100,255,218,0.85)] ${
+        visible
+          ? "opacity-100 visible translate-y-0"
+          : "opacity-0 invisible translate-y-5"
+      }`}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Scroll to top"
     >
@@ -48,7 +52,6 @@ function ScrollToTop() {
 }
 
 function App() {
-  // Scroll reveal effect
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -72,12 +75,15 @@ function App() {
 
   return (
     <>
-      <a href="#main-content" className="skip-link">
+      <a
+        href="#main-content"
+        className="absolute -top-[60px] left-4 z-[9999] px-[18px] py-[10px] bg-accent text-bg-primary font-sans font-semibold rounded no-underline transition-[top] duration-200 focus:top-4"
+      >
         Skip to main content
       </a>
       <Header />
 
-      {/* Left sidebar - Social links */}
+      {/* Left sidebar — Social links. Kept as CSS class: ::after vertical line requires CSS */}
       <div className="side-social">
         <ul>
           <li>
@@ -103,14 +109,14 @@ function App() {
         </ul>
       </div>
 
-      {/* Right sidebar - Email */}
+      {/* Right sidebar — Email. Kept as CSS class: ::after vertical line requires CSS */}
       <div className="side-email">
         <a href="mailto:adriana.camarotto@gmail.com">
           adriana.camarotto@gmail.com
         </a>
       </div>
 
-      <main className="main-content" id="main-content">
+      <main className="flex-1 pt-[70px]" id="main-content">
         <Home />
         <About />
         <Experience />

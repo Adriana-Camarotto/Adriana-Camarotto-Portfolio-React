@@ -29,7 +29,7 @@ const NextjsIcon = () => (
     viewBox="0 0 128 128"
     width="1em"
     height="1em"
-    className="skill-icon svg-icon"
+    className="text-[2.25rem] text-accent"
     aria-hidden="true"
   >
     <path
@@ -45,7 +45,7 @@ const StatamicIcon = () => (
     viewBox="0 0 128 128"
     width="1em"
     height="1em"
-    className="skill-icon svg-icon"
+    className="text-[2.25rem] text-accent"
     aria-hidden="true"
   >
     <path
@@ -137,34 +137,37 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="skills-section reveal">
+    <section id="skills" className="bg-bg-primary relative overflow-hidden reveal">
       <canvas
         ref={canvasRef}
-        className="skills-matrix-canvas"
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-[0.12]"
         aria-hidden="true"
       />
       <div className="skills-matrix-overlay" aria-hidden="true"></div>
-      <div className="section-deco" aria-hidden="true">
+      <div className="section-deco z-[3]" aria-hidden="true">
         <span className="section-deco-tag">&lt;skills&gt;</span>
         <span className="section-deco-tag section-deco-close">
           &lt;/skills&gt;
         </span>
       </div>
-      <div className="section-inner">
+      <div className="section-inner relative z-[2]">
         <h2 className="numbered-heading">
           <span className="heading-num" aria-hidden="true">
             &lt;/&gt;
           </span>{" "}
           Skills &amp; Technologies
         </h2>
-        <p className="section-description">
+        <p className="max-w-[600px] mb-[40px] text-[1.125rem] leading-[1.7]">
           Through my studies and professional experience, I developed a solid
           repertoire of skills related to web development. I dedicate my time to
           creating new projects and improving my knowledge as a developer.
         </p>
         <div className="skills-grid">
           {skills.map((skill, index) => (
-            <div key={index} className="skill-item">
+            <div
+              key={index}
+              className="flex flex-col items-center gap-[10px] py-5 px-[10px] bg-bg-secondary rounded-lg transition-all duration-[250ms] ease-portfolio hover:bg-bg-tertiary hover:-translate-y-[5px]"
+            >
               {skill.customIcon ? (
                 <skill.customIcon />
               ) : skill.image ? (
@@ -172,11 +175,13 @@ export default function Skills() {
               ) : (
                 <FontAwesomeIcon
                   icon={skill.icon}
-                  className="skill-icon"
+                  className="text-[2.25rem] text-accent"
                   aria-hidden="true"
                 />
               )}
-              <span className="skill-name">{skill.name}</span>
+              <span className="font-mono text-base text-text-primary text-center">
+                {skill.name}
+              </span>
             </div>
           ))}
         </div>

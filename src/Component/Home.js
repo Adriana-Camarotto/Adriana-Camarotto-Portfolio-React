@@ -58,24 +58,38 @@ Building performant, responsive and scalable user experiences.`;
       </div>
       <div className="hero-content">
         <div className="hero-text fade-in">
-          <div className="code-decorations" aria-hidden="true">
-            <span className="code-tag">&lt;/html&gt;</span>
-            <span className="code-tag code-indent">&lt;body&gt;</span>
+          {/* Code decorations — hidden on mobile */}
+          <div className="hidden md:block mb-5" aria-hidden="true">
+            <span className="block font-mono text-base text-text-secondary opacity-50 leading-[1.8]">
+              &lt;/html&gt;
+            </span>
+            <span className="block font-mono text-base text-text-secondary opacity-50 leading-[1.8] pl-5">
+              &lt;body&gt;
+            </span>
           </div>
-          <p className="hero-code-label" aria-hidden="true">
+          <p
+            className="hidden md:block font-mono text-base text-text-secondary opacity-40 my-1"
+            aria-hidden="true"
+          >
             &lt;h1/&gt;
           </p>
           <h1 className="hero-name">
             Hello{" "}
-            <br className="hero-br-hide" />
-            I'm <span className="highlight">Adri,</span>
+            <br className="hidden md:inline" />
+            I'm <span className="text-accent">Adri,</span>
             <br />
             Web developer
           </h1>
-          <p className="hero-code-label" aria-hidden="true">
+          <p
+            className="hidden md:block font-mono text-base text-text-secondary opacity-40 my-1"
+            aria-hidden="true"
+          >
             &lt;h1/&gt;
           </p>
-          <p className="hero-code-label" aria-hidden="true">
+          <p
+            className="hidden md:block font-mono text-base text-text-secondary opacity-40 my-1"
+            aria-hidden="true"
+          >
             &lt;p&gt;
           </p>
           <h2 className="hero-subtitle">
@@ -84,20 +98,26 @@ Building performant, responsive and scalable user experiences.`;
               |
             </span>
           </h2>
-          <p className="hero-code-label" aria-hidden="true">
+          <p
+            className="hidden md:block font-mono text-base text-text-secondary opacity-40 my-1"
+            aria-hidden="true"
+          >
             &lt;p/&gt;
           </p>
-          <div className="hero-cta-group">
+          <div className="flex items-center justify-center md:justify-start gap-[30px] mt-[10px]">
             <a
               href={resume}
               target="_blank"
               rel="noreferrer"
-              className="hero-cta"
+              className="font-mono text-base text-accent border border-accent px-[28px] py-[14px] rounded inline-block transition-all duration-[250ms] ease-portfolio hover:bg-accent-tint"
               aria-label="View my CV (opens in a new tab, Word document)"
             >
               View my CV
             </a>
-            <a href="#projects" className="hero-cta-link">
+            <a
+              href="#projects"
+              className="font-sans text-[1.075rem] text-text-primary underline underline-offset-4 transition-all duration-[250ms] ease-portfolio hover:text-accent"
+            >
               Portfolio
             </a>
           </div>

@@ -18,9 +18,7 @@ export default function Header() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
         });
       },
       { threshold: 0.3 },
@@ -39,24 +37,35 @@ export default function Header() {
 
   return (
     <nav
-      className={`navbar ${scrolled ? "scrolled" : ""}`}
+      className={`navbar fixed top-0 left-0 right-0 z-[100] flex items-center justify-between h-[70px] px-[50px] bg-[rgba(10,25,47,0.85)] backdrop-blur-[10px] transition-all duration-[250ms] ease-portfolio${
+        scrolled ? " shadow-[0_10px_30px_-10px_rgba(2,12,27,0.7)]" : ""
+      }`}
       aria-label="Main navigation"
     >
       <a
         href="#home"
-        className="navbar-logo"
+        className="group flex items-center gap-[10px] no-underline transition-all duration-[250ms] ease-portfolio"
         onClick={() => setMenuOpen(false)}
       >
-        <span className="logo-tag" aria-hidden="true">
+        <span
+          className="font-mono text-[1.125rem] font-bold text-accent tracking-[0.04em] transition-all duration-[250ms] ease-portfolio group-hover:text-white group-hover:drop-shadow-[0_0_12px_rgba(100,255,218,0.5)]"
+          aria-hidden="true"
+        >
           &lt;AC/&gt;
         </span>
-        <span className="logo-sep" aria-hidden="true">
+        <span
+          className="text-text-secondary font-light text-[1.125rem] opacity-40"
+          aria-hidden="true"
+        >
           |
         </span>
-        <span className="logo-name">Adri Camarotto</span>
+        <span className="text-text-primary font-sans text-[1.125rem] font-semibold tracking-[0.02em] transition-colors duration-[250ms] group-hover:text-accent">
+          Adri Camarotto
+        </span>
       </a>
+
       <button
-        className={`hamburger-btn ${menuOpen ? "open" : ""}`}
+        className={`hamburger-btn${menuOpen ? " open" : ""}`}
         type="button"
         aria-label="Toggle navigation"
         aria-expanded={menuOpen}
@@ -67,21 +76,26 @@ export default function Header() {
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </button>
+
       <div
         id="navbar-menu"
-        className={`navbar-menu ${menuOpen ? "open" : ""}`}
+        className={`navbar-menu${menuOpen ? " open" : ""}`}
       >
         <ul className="navbar-nav">
           {links.map((link) => (
             <li key={link.id} className="nav-item">
               <a
                 href={link.to}
-                className={`nav-link ${activeSection === link.id ? "active" : ""}`}
+                className={`nav-link font-sans text-base font-medium px-[14px] py-[10px] transition-all duration-[250ms] ease-portfolio hover:text-accent inline-block${
+                  activeSection === link.id
+                    ? " text-accent"
+                    : " text-text-primary"
+                }`}
                 aria-current={activeSection === link.id ? "page" : undefined}
                 onClick={() => setMenuOpen(false)}
               >
                 {activeSection === link.id ? (
-                  <span className="nav-active-bracket">
+                  <span className="text-accent font-mono font-medium">
                     <span aria-hidden="true">&lt;</span>
                     {link.label}
                     <span aria-hidden="true">&gt;</span>
@@ -93,30 +107,31 @@ export default function Header() {
             </li>
           ))}
         </ul>
+
         <div className="navbar-social">
           <a
             href="https://www.linkedin.com/in/adriana-camarotto/"
             target="_blank"
             rel="noreferrer"
-            className="navbar-social-link"
+            className="navbar-social-link flex items-center justify-center w-11 h-11 rounded-full text-[1.125rem] text-text-secondary transition-all duration-[250ms] ease-portfolio hover:text-accent"
             aria-label="LinkedIn"
           >
             <FontAwesomeIcon icon={faLinkedinIn} />
-            <span className="navbar-social-label">LinkedIn</span>
+            <span className="sr-only">LinkedIn</span>
           </a>
           <a
             href="https://github.com/Adriana-Camarotto"
             target="_blank"
             rel="noreferrer"
-            className="navbar-social-link"
+            className="navbar-social-link flex items-center justify-center w-11 h-11 rounded-full text-[1.125rem] text-text-secondary transition-all duration-[250ms] ease-portfolio hover:text-accent"
             aria-label="GitHub"
           >
             <FontAwesomeIcon icon={faGithub} />
-            <span className="navbar-social-label">Github</span>
+            <span className="sr-only">Github</span>
           </a>
           <a
             href="mailto:adriana.camarotto@gmail.com"
-            className="navbar-email-btn"
+            className="navbar-email-btn flex items-center justify-center w-11 h-11 rounded-full bg-accent text-bg-primary transition-all duration-[250ms] ease-portfolio hover:bg-[rgba(100,255,218,0.8)]"
             aria-label="Email"
           >
             <svg

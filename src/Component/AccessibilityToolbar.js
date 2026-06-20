@@ -20,7 +20,6 @@ export default function AccessibilityToolbar() {
     const saved = localStorage.getItem("a11y-settings");
     if (saved) {
       try {
-        // Merge with defaults so missing keys don't break older saved data
         const parsed = { ...DEFAULT_SETTINGS, ...JSON.parse(saved) };
         setSettings(parsed);
         applySettings(parsed);
@@ -50,10 +49,7 @@ export default function AccessibilityToolbar() {
     const panel = document.getElementById("a11y-panel");
     if (!panel) return;
 
-    // Focus first interactive element directly
-    const focusable = panel.querySelectorAll(
-      'button, input[type="checkbox"]'
-    );
+    const focusable = panel.querySelectorAll('button, input[type="checkbox"]');
     if (focusable.length) focusable[0].focus();
 
     const trap = (e) => {
@@ -80,39 +76,13 @@ export default function AccessibilityToolbar() {
   const applySettings = (newSettings) => {
     const body = document.body;
 
-    // Font size must scale the ROOT element so rem-based text on the site
-    // actually changes (rem is relative to <html>, not <body>).
     document.documentElement.style.fontSize = `${newSettings.fontSize}%`;
 
-    if (newSettings.dyslexia) {
-      body.classList.add("a11y-dyslexia");
-    } else {
-      body.classList.remove("a11y-dyslexia");
-    }
-
-    if (newSettings.highContrast) {
-      body.classList.add("a11y-high-contrast");
-    } else {
-      body.classList.remove("a11y-high-contrast");
-    }
-
-    if (newSettings.noMotion) {
-      body.classList.add("a11y-no-motion");
-    } else {
-      body.classList.remove("a11y-no-motion");
-    }
-
-    if (newSettings.lineHeight) {
-      body.classList.add("a11y-line-height");
-    } else {
-      body.classList.remove("a11y-line-height");
-    }
-
-    if (newSettings.letterSpacing) {
-      body.classList.add("a11y-letter-spacing");
-    } else {
-      body.classList.remove("a11y-letter-spacing");
-    }
+    body.classList.toggle("a11y-dyslexia", newSettings.dyslexia);
+    body.classList.toggle("a11y-high-contrast", newSettings.highContrast);
+    body.classList.toggle("a11y-no-motion", newSettings.noMotion);
+    body.classList.toggle("a11y-line-height", newSettings.lineHeight);
+    body.classList.toggle("a11y-letter-spacing", newSettings.letterSpacing);
 
     localStorage.setItem("a11y-settings", JSON.stringify(newSettings));
   };
@@ -129,10 +99,10 @@ export default function AccessibilityToolbar() {
   };
 
   return (
-    <div className="a11y-toolbar-wrapper">
+    <div className="fixed top-[70px] right-[25px] z-[1000] font-sans sm:top-[80px] sm:right-[50px]">
       <button
         ref={toggleBtnRef}
-        className="a11y-toggle-btn"
+        className="w-11 h-11 rounded-full bg-accent text-bg-primary border-none cursor-pointer text-[20px] flex items-center justify-center p-0 shadow-[0_4px_12px_rgba(0,0,0,0.3)] transition-all duration-300 hover:scale-110 hover:outline hover:outline-2 hover:outline-accent hover:outline-offset-[3px] focus:outline focus:outline-2 focus:outline-accent focus:outline-offset-[3px]"
         onClick={() => setIsOpen(!isOpen)}
         aria-label={isOpen ? "Close accessibility panel" : "Open accessibility panel"}
         aria-expanded={isOpen}
@@ -147,28 +117,33 @@ export default function AccessibilityToolbar() {
       {isOpen && (
         <div
           id="a11y-panel"
-          className="a11y-panel"
+          className="a11y-panel absolute top-[60px] right-0 bg-bg-secondary border border-accent rounded-lg p-4 w-[280px] shadow-[0_8px_24px_rgba(0,0,0,0.4)]"
           role="region"
           aria-label="Accessibility controls"
         >
-          <h3 className="a11y-panel-title" tabIndex={-1} ref={panelTitleRef}>
+          <h3
+            className="text-text-primary text-[1.125rem] font-semibold mb-3 mt-0 pb-2 border-b border-accent"
+            tabIndex={-1}
+            ref={panelTitleRef}
+          >
             Accessibility
           </h3>
 
-          <div
-            className="a11y-control"
-            role="group"
-            aria-label="Font size"
-          >
-            <span className="a11y-control-title">Font size</span>
-            <div className="a11y-control-row">
+          <div className="mb-3" role="group" aria-label="Font size">
+            <span className="block text-text-primary text-[1.075rem] mb-[6px] font-medium">
+              Font size
+            </span>
+            {/* a11y-control-row: keeps CSS class for `button` descendant styles */}
+            <div className="a11y-control-row flex items-center gap-2 justify-between">
               <button
                 onClick={() => updateSetting("fontSize", Math.max(100, settings.fontSize - 10))}
                 aria-label="Decrease font size"
               >
                 <span aria-hidden="true">−</span>
               </button>
-              <span className="a11y-value">{settings.fontSize}%</span>
+              <span className="text-text-secondary text-base min-w-[50px] text-center">
+                {settings.fontSize}%
+              </span>
               <button
                 onClick={() => updateSetting("fontSize", Math.min(150, settings.fontSize + 10))}
                 aria-label="Increase font size"
@@ -178,62 +153,30 @@ export default function AccessibilityToolbar() {
             </div>
           </div>
 
-          <div className="a11y-control">
-            <label className="a11y-checkbox-label">
-              <input
-                type="checkbox"
-                checked={settings.dyslexia}
-                onChange={(e) => updateSetting("dyslexia", e.target.checked)}
-              />
-              <span>Dyslexia font</span>
-            </label>
-          </div>
+          {[
+            { key: "dyslexia", label: "Dyslexia font" },
+            { key: "highContrast", label: "High contrast" },
+            { key: "noMotion", label: "No animations" },
+            { key: "lineHeight", label: "Line height" },
+            { key: "letterSpacing", label: "Letter spacing" },
+          ].map(({ key, label }) => (
+            <div key={key} className="mb-3">
+              {/* a11y-checkbox-label: keeps CSS class for input[type=checkbox] descendant styles */}
+              <label className="a11y-checkbox-label flex items-center gap-[10px] cursor-pointer text-text-primary text-[1.075rem] select-none">
+                <input
+                  type="checkbox"
+                  checked={settings[key]}
+                  onChange={(e) => updateSetting(key, e.target.checked)}
+                />
+                <span>{label}</span>
+              </label>
+            </div>
+          ))}
 
-          <div className="a11y-control">
-            <label className="a11y-checkbox-label">
-              <input
-                type="checkbox"
-                checked={settings.highContrast}
-                onChange={(e) => updateSetting("highContrast", e.target.checked)}
-              />
-              <span>High contrast</span>
-            </label>
-          </div>
-
-          <div className="a11y-control">
-            <label className="a11y-checkbox-label">
-              <input
-                type="checkbox"
-                checked={settings.noMotion}
-                onChange={(e) => updateSetting("noMotion", e.target.checked)}
-              />
-              <span>No animations</span>
-            </label>
-          </div>
-
-          <div className="a11y-control">
-            <label className="a11y-checkbox-label">
-              <input
-                type="checkbox"
-                checked={settings.lineHeight}
-                onChange={(e) => updateSetting("lineHeight", e.target.checked)}
-              />
-              <span>Line height</span>
-            </label>
-          </div>
-
-          <div className="a11y-control">
-            <label className="a11y-checkbox-label">
-              <input
-                type="checkbox"
-                checked={settings.letterSpacing}
-                onChange={(e) => updateSetting("letterSpacing", e.target.checked)}
-              />
-              <span>Letter spacing</span>
-            </label>
-          </div>
-
-          <button className="a11y-reset-btn" onClick={resetAll}>
+          <button
+            className="a11y-reset-btn w-full py-[10px] mt-3 bg-accent text-bg-primary border-none rounded cursor-pointer text-[1.075rem] font-semibold transition-all duration-200"
+            onClick={resetAll}
+          >
             Reset all
           </button>
         </div>

@@ -97,7 +97,7 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="experience-section reveal">
+    <section id="experience" className="bg-bg-primary relative overflow-hidden reveal">
       <div className="section-deco" aria-hidden="true">
         <span className="section-deco-tag">&lt;experience&gt;</span>
         <span className="section-deco-tag section-deco-close">
@@ -180,11 +180,11 @@ const Experience = () => {
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
-            <h3 className="exp-title">
+            <h3 className="text-[1.4rem] font-semibold text-text-primary mb-1">
               {active.role}{" "}
-              <span className="exp-company">@ {active.company}</span>
+              <span className="text-accent">@ {active.company}</span>
             </h3>
-            <p className="exp-period">
+            <p className="font-mono text-base text-text-secondary mb-5">
               {active.period} · {active.location}
             </p>
             <ul className="exp-list">
