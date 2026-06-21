@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useCallback } from "react";
 import myPhoto2 from "../Assets/myPhoto2.webp";
 
 function About() {
+  const handleTilt = useCallback((e) => {
+    if (document.body.classList.contains("a11y-no-motion")) return;
+    const card = e.currentTarget;
+    const { left, top, width, height } = card.getBoundingClientRect();
+    const x = (e.clientX - left) / width - 0.5;
+    const y = (e.clientY - top) / height - 0.5;
+    card.style.transition = "transform 0.06s linear, box-shadow 0.06s linear";
+    card.style.transform = `perspective(500px) rotateX(${y * -20}deg) rotateY(${x * 20}deg) translateZ(14px) translateY(-4px)`;
+    card.style.boxShadow = `${x * -12}px ${y * -12}px 24px rgba(100,255,218,0.18)`;
+  }, []);
+
+  const handleTiltReset = useCallback((e) => {
+    const card = e.currentTarget;
+    card.style.transition = "transform 0.4s ease, box-shadow 0.4s ease";
+    card.style.transform = "";
+    card.style.boxShadow = "";
+  }, []);
+
   const softSkills = [
     "Attention to Detail",
     "Team Collaboration",
@@ -134,10 +152,13 @@ function About() {
               {hobbies.map(({ icon, label }) => (
                 <div
                   key={label}
-                  className="group flex flex-col items-center gap-[10px] py-[14px] px-[10px] md:py-5 md:px-6 bg-bg-secondary border border-transparent rounded-lg transition-all duration-[250ms] ease-portfolio flex-1 min-w-[80px] md:flex-none md:w-[150px] hover:border-accent hover:-translate-y-[4px] hover:shadow-[0_8px_25px_rgba(2,12,27,0.5)]"
+                  onMouseMove={handleTilt}
+                  onMouseLeave={handleTiltReset}
+                  style={{ willChange: "transform" }}
+                  className="group flex flex-col items-center gap-[10px] py-[14px] px-[10px] md:py-5 md:px-6 bg-bg-secondary border border-transparent rounded-lg transition-[border-color] duration-[250ms] ease-portfolio flex-1 min-w-[80px] md:flex-none md:w-[150px] hover:border-accent"
                 >
                   <span
-                    className="text-[1.7rem] text-accent transition-all duration-[250ms] ease-portfolio group-hover:scale-[1.15]"
+                    className="text-[1.7rem] text-accent transition-transform duration-[250ms] ease-portfolio group-hover:scale-[1.15]"
                     aria-hidden="true"
                   >
                     {icon}
