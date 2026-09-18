@@ -1,4 +1,4 @@
-[![Portfolio Live](https://img.shields.io/badge/status-live-success)](https://adriana-camarotto.github.io/Adriana-Camarotto-Portfolio-React/)
+[![Portfolio Live](https://img.shields.io/badge/status-live-success)](https://adricamarottoportfolio.netlify.app/)
 
 # ✨ Adri Camarotto Portfolio
 
@@ -11,7 +11,7 @@ A personal portfolio built with React to showcase my frontend work, projects, sk
 
 ## 📌 Deployed Site
 
-🎯 [View the live portfolio](https://https://adricamarottoportfolio.netlify.app/)
+🎯 [View the live portfolio](https://adricamarottoportfolio.netlify.app/)
 
 ---
 
