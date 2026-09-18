@@ -5,13 +5,13 @@
 A personal portfolio built with React to showcase my frontend work, projects, skills, and professional experience.
 
 ## 📷 Project Screenshot
-![Adri Camarotto portfolio homepage](./src/Assets/screenshotHome.png)
+![Adri Camarotto portfolio homepage](./src/Assets/screenshotHome.pdf)
 
 ---
 
 ## 📌 Deployed Site
 
-🎯 [View the live portfolio](https://adriana-camarotto.github.io/Adriana-Camarotto-Portfolio-React/)
+🎯 [View the live portfolio](https://https://adricamarottoportfolio.netlify.app/)
 
 ---
 
