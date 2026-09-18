@@ -9,15 +9,15 @@ describe('Experience', () => {
     expect(screen.getByText(/Where I've Worked/i)).toBeInTheDocument();
   });
 
-  it('shows the first experience (Alt Design) by default', () => {
+  it('shows the first experience (Inkfire) by default', () => {
     render(<Experience />);
-    expect(screen.getByRole('tabpanel')).toHaveTextContent('Alt Design');
+    expect(screen.getByRole('tabpanel')).toHaveTextContent('Inkfire');
     expect(screen.getByRole('tabpanel')).toHaveTextContent('Web Developer');
   });
 
-  it('renders all 4 company tabs', () => {
+  it('renders all 5 company tabs', () => {
     render(<Experience />);
-    const companies = ['Alt Design', 'Design Monkey Media', 'DizzitUp', 'Apanvi'];
+    const companies = ['Inkfire', 'Alt Design', 'Design Monkey Media Ltd', 'DizzitUp', 'Apanvi (Non-Profit)'];
     const [desktopTablist] = screen.getAllByRole('tablist', { name: /companies/i });
     companies.forEach((company) => {
       expect(within(desktopTablist).getByRole('tab', { name: company })).toBeInTheDocument();
@@ -36,7 +36,7 @@ describe('Experience', () => {
     render(<Experience />);
     const [desktopTablist] = screen.getAllByRole('tablist', { name: /companies/i });
     fireEvent.keyDown(desktopTablist, { key: 'ArrowRight' });
-    expect(screen.getByRole('tabpanel')).toHaveTextContent('Design Monkey Media');
+    expect(screen.getByRole('tabpanel')).toHaveTextContent('Alt Design');
   });
 
   it('ArrowLeft wraps to the last tab from the first', () => {
@@ -54,7 +54,7 @@ describe('Experience', () => {
     expect(screen.getByRole('tabpanel')).toHaveTextContent('Apanvi');
     // Then Home returns to first
     fireEvent.keyDown(desktopTablist, { key: 'Home' });
-    expect(screen.getByRole('tabpanel')).toHaveTextContent('Alt Design');
+    expect(screen.getByRole('tabpanel')).toHaveTextContent('Inkfire');
   });
 
   it('End key moves to the last tab', () => {
@@ -67,7 +67,7 @@ describe('Experience', () => {
   it('carousel Next button advances to the next company', () => {
     render(<Experience />);
     fireEvent.click(screen.getByRole('button', { name: /next company/i }));
-    expect(screen.getByRole('tabpanel')).toHaveTextContent('Design Monkey Media');
+    expect(screen.getByRole('tabpanel')).toHaveTextContent('Alt Design');
   });
 
   it('carousel Previous button wraps from first to last company', () => {

@@ -8,7 +8,7 @@ import {
   faNodeJs,
 } from "@fortawesome/free-brands-svg-icons";
 import myPhoto from "../Assets/AdriProfileImg.webp";
-import resume from "../Assets/adriana_camarotto_cv_mar_2026.docx";
+import resume from "../Assets/Adriana_Camarotto_CV_September_2026.pdf";
 
 const hasNoMotion = () =>
   document.body.classList.contains("a11y-no-motion") ||
