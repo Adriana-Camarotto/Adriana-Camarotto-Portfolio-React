@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Adriana-Camarotto-Portfolio-React/static/css/main.24265156.css",
-    "main.js": "/Adriana-Camarotto-Portfolio-React/static/js/main.2f1e5e2d.js",
-    "static/js/453.93462478.chunk.js": "/Adriana-Camarotto-Portfolio-React/static/js/453.93462478.chunk.js",
-    "static/media/screenshoSpotify.webp": "/Adriana-Camarotto-Portfolio-React/static/media/screenshoSpotify.ea31c00eb3f7fde368c8.webp",
-    "static/media/myPhoto2.webp": "/Adriana-Camarotto-Portfolio-React/static/media/myPhoto2.c4a1952cc8a227a9fb49.webp",
-    "static/media/AdriProfileImg.webp": "/Adriana-Camarotto-Portfolio-React/static/media/AdriProfileImg.b6e695b0bf82ea885861.webp",
-    "static/media/adriana_camarotto_cv_mar_2026.docx": "/Adriana-Camarotto-Portfolio-React/static/media/adriana_camarotto_cv_mar_2026.330f6626ff0885d9bcb6.docx",
-    "static/media/screenshotNotes.webp": "/Adriana-Camarotto-Portfolio-React/static/media/screenshotNotes.418d77f6d9bbf86e5304.webp",
-    "index.html": "/Adriana-Camarotto-Portfolio-React/index.html",
-    "main.24265156.css.map": "/Adriana-Camarotto-Portfolio-React/static/css/main.24265156.css.map",
-    "main.2f1e5e2d.js.map": "/Adriana-Camarotto-Portfolio-React/static/js/main.2f1e5e2d.js.map",
-    "453.93462478.chunk.js.map": "/Adriana-Camarotto-Portfolio-React/static/js/453.93462478.chunk.js.map"
+    "main.css": "/static/css/main.3d28c29e.css",
+    "main.js": "/static/js/main.04c78c24.js",
+    "static/js/887.4d3cd5c0.chunk.js": "/static/js/887.4d3cd5c0.chunk.js",
+    "static/media/Adriana_Camarotto_CV_September_2026.pdf": "/static/media/Adriana_Camarotto_CV_September_2026.fa9077fb2394e231f4ea.pdf",
+    "static/media/screenshoSpotify.webp": "/static/media/screenshoSpotify.ea31c00eb3f7fde368c8.webp",
+    "static/media/myPhoto2.webp": "/static/media/myPhoto2.c4a1952cc8a227a9fb49.webp",
+    "static/media/AdriProfileImg.webp": "/static/media/AdriProfileImg.b6e695b0bf82ea885861.webp",
+    "static/media/screenshotNotes.webp": "/static/media/screenshotNotes.418d77f6d9bbf86e5304.webp",
+    "index.html": "/index.html",
+    "main.3d28c29e.css.map": "/static/css/main.3d28c29e.css.map",
+    "main.04c78c24.js.map": "/static/js/main.04c78c24.js.map",
+    "887.4d3cd5c0.chunk.js.map": "/static/js/887.4d3cd5c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.24265156.css",
-    "static/js/main.2f1e5e2d.js"
+    "static/css/main.3d28c29e.css",
+    "static/js/main.04c78c24.js"
   ]
 }
