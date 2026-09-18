@@ -1,28 +1,27 @@
-[![Work in Progress](https://img.shields.io/badge/status-work%20in%20progress-yellow)](https://shields.io/)
+[![Portfolio Live](https://img.shields.io/badge/status-live-success)](https://adriana-camarotto.github.io/Adriana-Camarotto-Portfolio-React/)
 
-# ✨ My portfolio
+# ✨ Adri Camarotto Portfolio
 
-## 📷 Screenshot
-![preview](./src/Assets/screenshotHome.png)
- 
+A personal portfolio built with React to showcase my frontend work, projects, skills, and professional experience.
 
----  
-
-
-## 📌 Deployed site
-
-🎯  [Click here to access!](https://adricamarottoportfolio.netlify.app/)
-
+## 📷 Project Screenshot
+![Adri Camarotto portfolio homepage](./src/Assets/screenshotHome.png)
 
 ---
 
-## 🚀 Tecnologies
+## 📌 Deployed Site
 
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
+🎯 [View the live portfolio](https://adriana-camarotto.github.io/Adriana-Camarotto-Portfolio-React/)
+
+---
+
+## 🚀 Technologies
+
 - React
+- JavaScript
+- HTML5
+- CSS3
+- Bootstrap
 - npm
 
 ---
