@@ -5,7 +5,7 @@
 A personal portfolio built with React to showcase my frontend work, projects, skills, and professional experience.
 
 ## 📷 Project Screenshot
-![Adri Camarotto portfolio homepage](./src/Assets/screenshotHome.pdf)
+![Adri Camarotto portfolio homepage](./src/Assets/screenshotHome.png)
 
 ---
 
