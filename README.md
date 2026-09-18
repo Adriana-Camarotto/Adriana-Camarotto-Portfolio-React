@@ -1,4 +1,6 @@
-[![Portfolio Live](https://img.shields.io/badge/status-live-success)](https://adricamarottoportfolio.netlify.app/ "Open portfolio in a new tab")
+<a href="https://adricamarottoportfolio.netlify.app/" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/status-live-success" alt="Portfolio Live" />
+</a>
 
 # ✨ Adri Camarotto Portfolio
 
@@ -11,7 +13,7 @@ A personal portfolio built with React to showcase my frontend work, projects, sk
 
 ## 📌 Deployed Site
 
-🎯 [View the live portfolio](https://adricamarottoportfolio.netlify.app/ "Open portfolio in a new tab")
+🎯 <a href="https://adricamarottoportfolio.netlify.app/" target="_blank" rel="noopener noreferrer">View the live portfolio</a>
 
 ---
 
