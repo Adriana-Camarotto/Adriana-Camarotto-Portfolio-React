@@ -771,8 +771,9 @@ img {
 
 
   .hero-name {
-    font-size: clamp(2.6rem, 10vw, 3.5rem);
-    margin-bottom: 24px;
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
+    margin-bottom: 20px;
+    line-height: 1.05;
     white-space: normal;
     overflow-wrap: anywhere;
     word-break: break-word;
@@ -780,6 +781,7 @@ img {
 
   .hero-role {
     white-space: nowrap;
+    display: inline-block;
   }
 
   .hero-subtitle {
