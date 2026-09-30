@@ -208,10 +208,12 @@ img {
   @apply max-w-[1200px] mx-auto w-full grid items-center;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  min-width: 0;
 }
 
 .hero-text {
   @apply flex flex-col;
+  min-width: 0;
 }
 
 .hero-image {
@@ -220,7 +222,15 @@ img {
 
 .hero-name {
   font-size: clamp(3.15rem, 6.75vw, 5rem);
-  @apply font-extrabold text-text-primary leading-[1.15] mb-2 whitespace-nowrap;
+  @apply font-extrabold text-text-primary leading-[1.15] mb-2;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.hero-role {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .hero-subtitle {
@@ -763,6 +773,13 @@ img {
   .hero-name {
     font-size: clamp(2.6rem, 10vw, 3.5rem);
     margin-bottom: 24px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .hero-role {
+    white-space: nowrap;
   }
 
   .hero-subtitle {

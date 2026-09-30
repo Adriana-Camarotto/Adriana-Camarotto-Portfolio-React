@@ -78,7 +78,7 @@ Building performant, responsive and scalable user experiences.`;
             <br className="hidden md:inline" />
             I'm <span className="text-accent">Adri,</span>
             <br />
-            Web developer
+            <span className="hero-role">Web Developer</span>
           </h1>
           <p
             className="hidden md:block font-mono text-base text-text-secondary opacity-40 my-1"
